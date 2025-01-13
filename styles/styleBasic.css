@@ -1,0 +1,22 @@
+:root {
+ --color1: navy;
+ --color2: white;
+ --color3: black;
+ --color4: grey;
+ --color5: darkred;
+}
+
+
+/* Media Queries */
+@media (min-width: 35rem) {
+    form {
+      padding: 2rem;
+    }
+  }
+  
+  @media (min-width: 64rem) {
+    main {
+      max-width: 64rem;
+      margin: auto;
+    }
+  }

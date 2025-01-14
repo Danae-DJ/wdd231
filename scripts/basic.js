@@ -1,19 +1,16 @@
 const yearSpan = document.getElementById('currentYear');
 yearSpan.textContent = new Date().getFullYear();
 
-
 const lastModified = document.getElementById('lastModified');
 lastModified.textContent = `Last Modified: ${document.lastModified}`;
 
-
-//Hamburger menu
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show'); 
+// Hamburger menu
+document.getElementById('menuToggle').addEventListener('click', function () {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show'); // Toggle the 'show' class on the nav links
 });
 
-//courses filter
+// Courses filter
 const courses = [
     { code: 'WDD230', name: 'Web Frontend Development I', credits: 3, completed: true },
     { code: 'WDD240', name: 'Web Frontend Development II', credits: 3, completed: false },
@@ -40,7 +37,6 @@ function renderCourses(filter = 'all') {
     calculateTotalCredits(filter); // Update total credits when courses are rendered
 }
 
-
 function filterCourses(filter) {
     renderCourses(filter);
     document.querySelectorAll('#filterButtons button').forEach(button => {
@@ -55,4 +51,5 @@ function calculateTotalCredits(filter = 'all') {
 
     document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
 }
+
 renderCourses();

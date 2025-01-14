@@ -205,6 +205,9 @@ figcaption {
     color: var(--color2);
 }
 
+#totalCredits {
+    text-align: center;
+  }
 /* Hamburger Menu */
 
 nav #navLinks {

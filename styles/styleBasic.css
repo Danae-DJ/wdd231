@@ -208,8 +208,8 @@ figcaption {
 #totalCredits {
     text-align: center;
   }
+  
 /* Hamburger Menu */
-
 nav #navLinks {
     display: none;
     flex-direction: column;
@@ -230,16 +230,17 @@ nav #menuToggle {
     border: none;
 }
 
-
 /* Media Queries */
-@media (min-width: 767px) {
-    nav #menuToggle {
-        display: none;
-    }
 
+/* For screens larger than 767px (tablet and up), make the nav menu horizontal and visible */
+@media (min-width: 767px) {
     nav #navLinks {
         display: flex;
         flex-direction: row;
+    }
+
+    nav #menuToggle {
+        display: none; /* Hide hamburger menu on larger screens */
     }
 
     main {
@@ -248,6 +249,7 @@ nav #menuToggle {
     }
 }
 
+/* For screens larger than 35rem (~560px), adjust layout of navigation links */
 @media only screen and (min-width: 35rem) {
     nav ul {
         display: flex;
@@ -263,6 +265,7 @@ nav #menuToggle {
     }
 }
 
+/* For screens larger than 64rem (~1024px), apply layout changes */
 @media only screen and (min-width: 64rem) {
     header, nav, main, footer {
         max-width: 64rem;

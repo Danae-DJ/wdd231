@@ -4,7 +4,7 @@
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD231 | Course Home Page</title>
-  <meta name="description" content="This a new page to demostrates my knoledge by html, css and javascript. In this activity, I am applying the basic requeriments and concepts to a fuctional website. ">
+  <meta name="description" content="A page demonstrating knowledge in HTML, CSS, and JavaScript by applying basic requirements to create a functional website.">
   <meta name="author" content="Dánae De la Cruz Jiménez">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,11 @@
 </head>
 <body>
     <header>
-        <img src="images/student_photo.webp" alt="student photo" width="50" loading="lazy">
+        <img src="images/student_photo.webp" alt="Portrait of Dánae De la Cruz Jiménez" width="50" loading="lazy">
         <h1>Dánae De la Cruz Jiménez</h1>
     </header>
     <nav>
-        <button id="menuToggle">☰</button>
+        <button id="menuToggle" aria-label="Toggle navigation menu">☰</button>
         <ul id="navLinks">
             <li><a href="https://danae-dj.github.io/wdd231/index.html" class="current">Home</a></li>
             <li><a href="https://danae-dj.github.io/wdd231/chamber.html">Chamber</a></li>
@@ -40,7 +40,7 @@
         <section class="country">
             <h2>Mexico City, Mexico</h2>
             <figure>
-                <img src="images/palacio-bellas-artes.webp" alt="palacio de bellas artes" width="200" loading="lazy">
+                <img src="images/palacio-bellas-artes.webp" alt="Palacio de Bellas Artes in Mexico City" width="200" loading="lazy">
                 <figcaption>Palacio de Bellas Artes</figcaption>
             </figure>
         </section>
@@ -52,6 +52,7 @@
                 <button onclick="filterCourses('WDD')">WDD Courses</button>
                 <button onclick="filterCourses('CSE')">CSE Courses</button>
             </div>
+            <p id="totalCredits" style="text-align:center;"></p>
         </section>
     </main>
 

@@ -10,11 +10,8 @@ lastModified.textContent = `Last Modified: ${document.lastModified}`;
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 menuToggle.addEventListener('click', () => {
-    const isHidden = navLinks.style.display === 'none' || !navLinks.style.display;
-    navLinks.style.display = isHidden ? 'flex' : 'none';
+    navLinks.classList.toggle('show'); 
 });
-
-
 
 //courses filter
 const courses = [
@@ -39,18 +36,23 @@ function renderCourses(filter = 'all') {
         `;
         courseContainer.appendChild(courseCard);
     });
+
+    calculateTotalCredits(filter); // Update total credits when courses are rendered
 }
-renderCourses();
 
 
 function filterCourses(filter) {
     renderCourses(filter);
+    document.querySelectorAll('#filterButtons button').forEach(button => {
+        button.classList.toggle('active', button.textContent.includes(filter));
+    });
 }
-
 
 function calculateTotalCredits(filter = 'all') {
     const totalCredits = courses
-        .filter(course => filter === 'all' ? true : course.code.startsWith(filter))
+        .filter(course => filter === 'all' || course.code.startsWith(filter))
         .reduce((sum, course) => sum + course.credits, 0);
-    console.log(`Total Credits: ${totalCredits}`); // Replace with DOM update
+
+    document.getElementById('totalCredits').textContent = `Total Credits: ${totalCredits}`;
 }
+renderCourses();

@@ -18,10 +18,13 @@
         <h1>Dánae De la Cruz Jiménez</h1>
     </header>
     <nav>
-        <a href="https://danae-dj.github.io/wdd231/index.html">Home</a>
-        <a href="#chamber">Chamber</a>
-        <a href="https://github.com/">GitHub Profile</a>
-        <a href="https://www.linkedin.com/jobs/search?trk=guest_homepage-basic_guest_nav_menu_jobs&position=1&pageNum=0">LinkedIn</a>
+        <button id="menuToggle">☰</button>
+        <ul id="navLinks">
+            <li><a href="https://danae-dj.github.io/wdd231/index.html" class="current">Home</a></li>
+            <li><a href="https://danae-dj.github.io/wdd231/chamber.html">Chamber</a></li>
+            <li><a href="https://github.com/">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
     </nav>
 
 
@@ -43,8 +46,11 @@
         </section>
         <section class="course">
             <h2>Web and Computer Programming Certificate</h2>
-            <div >
-
+            <div id="courseContainer"></div>
+            <div id="filterButtons">
+                <button onclick="filterCourses('all')">All Courses</button>
+                <button onclick="filterCourses('WDD')">WDD Courses</button>
+                <button onclick="filterCourses('CSE')">CSE Courses</button>
             </div>
         </section>
     </main>

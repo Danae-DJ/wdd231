@@ -55,7 +55,7 @@ h2 {
 
 nav {
     display: flex;
-    justify-content: left;
+    justify-content: space-around;
     background-color: var(--color3);
 }
 

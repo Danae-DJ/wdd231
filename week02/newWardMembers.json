@@ -1,0 +1,35 @@
+[
+    {
+        "family_name": "Miller",
+        "move_in_date": "2025-01-19",
+        "number_of_people": 5,
+        "visited_by_bishopric": true,
+        "family_members": [
+          {
+            "name": "Jerry Miller",
+            "gender": "Male",
+            "birthdate": "1980-07-15"
+          },
+          {
+            "name": "Sarah Miller",
+            "gender": "Female",
+            "birthdate": "1982-02-03"
+          },
+          {
+            "name": "Lala Miller",
+            "gender": "Female",
+            "birthdate": "2000-12-23"
+          },
+          {
+            "name": "Marion Miller",
+            "gender": "Male",
+            "birthdate": "2002-10-10"
+          },
+          {
+            "name": "Thomas Miller",
+            "gender": "Male",
+            "birthdate": "2010-09-21"
+          }
+        ]
+    }
+]

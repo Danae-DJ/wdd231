@@ -23,7 +23,7 @@ h2 {
   margin: 0 0 1rem 0;
 	 border-bottom: 1px solid #bbb;
 }
-/*
+
 h3 {
   margin: 0;
 }
@@ -32,7 +32,7 @@ h4 {
   color: #333;
   margin: 7px 0 5px 0;
 }
-*/
+
 p {
   margin: 0;
 }
@@ -45,6 +45,12 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
 
 section {
   margin: 0.25rem;

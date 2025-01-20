@@ -45,11 +45,11 @@ h2 {
     text-align: center;
 }
 
-/* Navigation Bar: Desktop Default */
+/* Navigation */
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack navigation vertically by default (mobile-first) */
+    justify-content: flex-start;
     background-color: var(--color3);
     padding: 0.5rem;
 }
@@ -72,18 +72,28 @@ nav a.current {
     border-bottom: 2px solid var(--color1);
 }
 
-/* Hide the hamburger menu and vertical styles by default */
+/* Hamburger Menu */
 nav #menuToggle {
-    display: none;
+    display: block; /* Show hamburger menu on mobile */
+    background-color: var(--blue);
+    color: var(--color2);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
 }
 
+/* Navigation Links */
 nav #navLinks {
-    display: flex;
-    flex-direction: row; /* Horizontal layout for links */
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
 }
 
-nav #navLinks li {
-    margin-left: 1rem; /* Add space between links */
+nav #navLinks.show {
+    display: flex;
+    max-height: 500px; /* Set a reasonable height for the expanded menu */
 }
 
 /* Main Section Layout */
@@ -91,7 +101,7 @@ main {
     max-width: 960px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 3fr 1fr; /* Default layout for desktop */
+    grid-template-columns: 2fr 1fr;
     grid-gap: 0.5rem;
     padding: 1rem;
 }
@@ -105,12 +115,14 @@ footer {
     text-align: center;
 }
 
+
 img {
     height: auto;
     max-width: 100%; /* Ensures responsive images */
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin: 0.5rem;
 }
+
 
 figure {
     margin: 0.5rem;
@@ -190,35 +202,36 @@ figcaption {
     text-align: center;
 }
 
+
 /* -------------------- */
 /* Media Queries Section */
 /* -------------------- */
 
-/* Mobile: Add styles for smaller screens */
-@media (max-width: 767px) {
+/* Tablet: Horizontal navigation bar */
+@media (min-width: 768px) {
     nav {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: row; /* Align navigation links horizontally */
+        justify-content: space-between;
+        align-items: center;
     }
 
     nav #menuToggle {
-        display: block; /* Show hamburger menu */
-        background-color: var(--blue);
-        color: var(--color2);
-        font-size: 1.5rem;
-        border: none;
-        cursor: pointer;
+        display: none; /* Hide hamburger menu button on larger screens */
     }
 
     nav #navLinks {
-        display: none; /* Hide links by default */
-        flex-direction: column; /* Stack links vertically */
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
+        display: flex; /* Show navigation links */
+        flex-direction: row; /* Align links in a row */
     }
 
-    nav #navLinks.show {
-        display: flex;
-        max-height: 500px; /* Show links when the menu is toggled */
+    nav #navLinks li {
+        margin-left: 1rem; /* Add space between links */
+    }
+}
+
+/* Desktop: Adjust main layout for wider screens */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 3fr 1fr; /* Adjust grid layout for wider screens */
     }
 }

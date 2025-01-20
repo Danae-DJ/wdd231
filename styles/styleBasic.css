@@ -48,7 +48,7 @@ h2 {
 /* Navigation Bar: Desktop Default */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--color3);
     padding: 0.5rem;

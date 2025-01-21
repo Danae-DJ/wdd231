@@ -1,0 +1,42 @@
+
+{
+    "Busines": [
+        {
+            "businesName":"Busines Name",
+            "businessTagline": "Business Tagline",
+            "email": "Email",
+            "phone": 1232347654,
+            "URL":"https://...",
+            "Image": "https://..."
+        },
+        {
+            "businesName":"Busines Name",
+            "businessTagline": "Business Tagline",
+            "email": "Email",
+            "phone": 1232347654,
+            "URL":"https://...",
+            "Image": "https://..."
+        },
+        {
+            "businesName":"Busines Name",
+            "businessTagline": "Business Tagline",
+            "email": "Email",
+            "phone": 1232347654,
+            "URL":"https://...",
+            "Image": "https://..."
+        },
+        {
+            "businesName":"Busines Name",
+            "businessTagline": "Business Tagline",
+            "email": "Email",
+            "phone": 1232347654,
+            "URL":"https://...",
+            "Image": "https://..."
+        }
+
+    ]
+}
+    
+
+
+

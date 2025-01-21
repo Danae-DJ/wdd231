@@ -1,0 +1,46 @@
+/*directory.css:*/
+:root {
+    --color1: navy;
+    --color2: white;
+    --color3: black;
+    --color4: grey;
+    --color5: darkred;
+    --blue: rgb(29, 77, 114);
+    --blue-1: rgba(29, 77, 114, 0.1);
+    --blue-7: rgba(29, 77, 114, 0.7);
+}
+
+
+/*every section in horinzontal position */
+
+
+
+
+
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    nav #menuToggle {
+        display: block; /* Show hamburger menu */
+        background-color: var(--blue);
+        color: var(--color2);
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav #navLinks {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav #navLinks.show {
+        display: flex;
+        max-height: 500px; /* Show links when the menu is toggled */
+    }
+}

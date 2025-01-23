@@ -18,6 +18,14 @@ const aCourse = {
         instructor: "Sis A",
       },
     ],
+    
+    //this option is better to use setCourseInfo and renderSections
+    // ... use init()
+    init: function() {
+        setCourseInfo(this);
+        renderSections(this.sections);
+    },
+
     changeEnrollment: function (sectionNum, add = true) {
       // find the right section...Array.findIndex will work here
       const sectionIndex = this.sections.findIndex(
@@ -33,6 +41,8 @@ const aCourse = {
       }
     },
   };
+
+
 function setCourseInfo(course) {
     const courseName = document.querySelector("#courseName");
     const coursecode = document.querySelector("#courseCode");
@@ -54,4 +64,5 @@ function setCourseInfo(course) {
 
   export default aCourse;
 
-  export {setCourseInfo, renderSections};
+  //danger, this option is good, but its possible a danger of change
+  //export {setCourseInfo, renderSections};

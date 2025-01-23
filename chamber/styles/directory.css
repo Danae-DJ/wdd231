@@ -35,6 +35,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 header h1 {
@@ -52,10 +53,18 @@ header figure img {
     height: auto;
 }
 
+.title {
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+}
+
+
 nav {
     display: flex;
     align-items: center;
     gap: 1rem;
+
 }
 
 nav ul {

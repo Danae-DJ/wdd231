@@ -93,7 +93,7 @@ nav ul li a.active {
 }
 /* Hero Section */
 main > section:first-of-type {
-    background: linear-gradient(rgba(29, 77, 114, 0.7), rgba(29, 77, 114, 0.3)), url('images/pexels-n-voitkevich-6120182.webp') no-repeat center center/cover;
+    background:url("../images/pexels-weekendplayer-187041.webp") no-repeat center center/cover;
     color: var(--color2);
     text-align: center;
     padding: 4rem 1rem;
@@ -129,7 +129,9 @@ main > section h2 {
     border-bottom: 2px solid var(--blue);
     display: inline-block;
 }
-
+.hero h2{
+    color: var(--color2);
+}
 main > section div {
     margin-bottom: 1.5rem;
 }
@@ -141,7 +143,7 @@ main > section div h3 {
 }
 
 main > section div p {
-    color: var(--color4);
+    color: var(--color3);
 }
 
 section, 
@@ -190,7 +192,7 @@ div {
 
 .card p {
     font-size: 0.9rem;
-    color: var(--color4);
+    color: var(--color3);
 }
 
 .card a {
@@ -237,7 +239,7 @@ footer p {
 }
 
 footer .highlight {
-    color: var(--color5);
+    color: var(--color2);
 }
 
 /* Hide the nav menu by default for smaller screens */

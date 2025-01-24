@@ -49,10 +49,22 @@ async function fetchMembers() {
         cardsContainer.innerHTML = '<p>Unable to load members. Please try again later.</p>';;
     }
 }
-
+//third option to button... in this case the html only need this reference:
+/* <section id="cards" class="grid">
+            <button id="viewToggle" aria-label="Toggle between grid and list view">Switch to List View</button> 
+    </section>*/
 function displayMembers(members) {
     const cardsContainer = document.getElementById('cards');
-    cardsContainer.innerHTML = ''; 
+    cardsContainer.innerHTML = ''; // Clear cards and button
+    
+    // Re-add the button
+    const viewToggle = document.createElement('button');
+    viewToggle.id = 'viewToggle';
+    viewToggle.textContent = 'Switch to List View';
+    viewToggle.addEventListener('click', toggleView);
+    cardsContainer.appendChild(viewToggle);
+
+    // Add the cards
     members.forEach(member => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -70,3 +82,7 @@ function displayMembers(members) {
 
 
 fetchMembers();
+//note: Solution 1 is the cleanest and most modular fix. 
+// Moving the button outside the #cards container ensures 
+// that dynamic content changes don’t interfere with the 
+// button’s functionality or visibility.

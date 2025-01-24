@@ -29,12 +29,7 @@ if (viewToggle) {
 }
 
 // Fetch and display members
-/* one option to work it
-async function fetchMembers() {
-    const response = await fetch('./data/members.json');
-    const data = await response.json();
-    displayMembers(data.Busines);
-}  second option in case of issues (it's better):*/
+/* second option in case of issues (it's better):*/
 const membersDocument_url = './data/members.json';
 async function fetchMembers() {
     const cardsContainer = document.getElementById('cards');
@@ -49,10 +44,15 @@ async function fetchMembers() {
         cardsContainer.innerHTML = '<p>Unable to load members. Please try again later.</p>';;
     }
 }
-
+//second option to buttom
 function displayMembers(members) {
     const cardsContainer = document.getElementById('cards');
-    cardsContainer.innerHTML = ''; 
+    
+    // Clear only the cards, not the entire container
+    //this not necesary => cardsContainer.innerHTML = '';
+    const cards = Array.from(cardsContainer.querySelectorAll('.card'));
+    cards.forEach(card => card.remove());
+
     members.forEach(member => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -66,6 +66,7 @@ function displayMembers(members) {
         `;
         cardsContainer.appendChild(card);
     });
+
 }
 
 

@@ -7,7 +7,8 @@
             "email": "info@businessone.com",
             "phone": "123-456-7890",
             "URL": "https://businessone.com",
-            "Image": "images/business-one.jpg"
+            "Image":"images/building1.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320972/"
         },
         {
             "businesName": "Business Two",
@@ -15,7 +16,8 @@
             "email": "contact@businesstwo.com",
             "phone": "987-654-3210",
             "URL": "https://businesstwo.com",
-            "Image": "images/business-two.jpg"
+            "Image": "images/building2.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320991/"
         },
         {
             "businesName": "Business Three",
@@ -23,7 +25,8 @@
             "email": "info@businessthree.com",
             "phone": "126-876-7090",
             "URL": "https://businessthree.com",
-            "Image": "images/business-three.jpg"
+            "Image": "images/building3.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/edificios-de-gran-altura-blancos-y-marrones-3600568/"
         },
         {
             "businesName": "Business Four",
@@ -31,7 +34,8 @@
             "email": "contact@businessfour.com",
             "phone": "117-954-3060",
             "URL": "https://businessfour.com",
-            "Image": "images/business-four.jpg"
+            "Image": "images/building4.jpeg",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/ciudad-calle-reflejo-reflexion-25798088/"
         }
 
     ]

@@ -1,0 +1,275 @@
+/*directory.css:*/
+:root {
+    --color1: navy;
+    --color2: white;
+    --color3: black;
+    --color4: grey;
+    --color5: darkred;
+    --blue: rgb(29, 77, 114);
+    --blue-1: rgba(29, 77, 114, 0.1);
+    --blue-7: rgba(29, 77, 114, 0.7);
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--color3);
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--blue);
+    color: var(--color2);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.8rem;
+}
+
+header h4 {
+    font-weight: normal;
+    margin-top: 0.5rem;
+}
+
+header figure img {
+    width: 50px;
+    height: auto;
+}
+
+.title {
+    max-width: 350px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--blue-7);
+}
+
+/* Change background color for individual links on hover */
+#navLinks a:hover {
+    background-color: var(--color4);
+}
+/* Hero Section */
+main > section:first-of-type {
+    background:url("../images/pexels-weekendplayer-187041.webp") no-repeat center center/cover;
+    color: var(--color2);
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+main > section:first-of-type button {
+    background-color: var(--blue);
+    color: var(--color2);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+main > section:first-of-type button:hover {
+    background-color: var(--blue-7);
+}
+
+.hero h2{
+    color: var(--color2);
+}
+main > section div {
+    margin-bottom: 1.5rem;
+}
+
+main > section div h3 {
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+main > section div p {
+    color: var(--color3);
+}
+
+section, 
+div {
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
+/* Toggle Button */
+#viewToggle {
+    display: block;
+    width: 100%;
+    background-color: var(--blue);
+    color: var(--color2);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    transition: background-color 0.3s ease;
+}
+
+#viewToggle:hover {
+    background-color: var(--blue-7);
+}
+
+/* Footer */
+/* General Footer Styling */
+footer {
+    background-color: var(--blue);
+    color: var(--color2);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footer-contact, .footer-social {
+    flex: 1;
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--color2);
+}
+
+.footer-contact p, .footer-contact a {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: var(--color2);
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.footer-social img {
+    width: 52px;
+    height: 52px;
+    transition: transform 0.3s ease;
+    background-color: var(--color2);
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Hide the nav menu by default for smaller screens */
+#navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--blue);
+    padding: 1rem;
+}
+
+/* Display the nav menu when the active class is applied */
+#navLinks.active {
+    display: flex;
+}
+
+/* For larger screens, ensure the menu is always visible */
+@media (min-width: 768px) {
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main > section:first-of-type {
+        padding: 2rem 1rem;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 480px) { 
+    header, footer { font-size: 0.8rem; }
+}

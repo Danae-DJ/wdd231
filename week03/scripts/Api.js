@@ -29,8 +29,18 @@ form.addEventListener("submit", async(event) => {
         weatherResult.innerHTML = `
         <h2>${data.name}, ${data.sys.country}</h2>
         <div class="results">
-            <i class="fa-solid fa-temperature-three-quarters"></i>
-            <p>Temperature: ${data.main.temp}°F</p>
+            <div class="weatherResult">
+                <i class="fa-solid fa-temperature-three-quarters"></i>
+                <p>Temperature: ${data.main.temp}°F</p>
+            </div>
+            <div class="weatherResult">
+                <i class="fa-solid fa-temperature-half></i>
+                <p>weather:${data.weather[0].description}</p>
+            </div>
+            <div class="weatherResult">
+                
+            </div>
+            <div class="weatherResult"></div>
         </div>
         `
     } catch {

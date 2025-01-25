@@ -3,12 +3,12 @@ const form = document.getElementById("weatherform");
 const cityInput = document.getElementById("cityInput");
 const weatherResult = document.getElementById("weatherResults");
 
-const API_KEY = '330d0457c38e79f15dd5eab574628d9b'
+const API_KEY = `330d0457c38e79f15dd5eab574628d9b`;
 
 form.addEventListener("submit", async(event) => {
     event.preventDefault();
 
-    const city = cityInput.ariaValueMax.trim();
+    const city = cityInput.value.trim();
 
     if (!city) {
         weatherResult.innerHTML ='<p>Please enter a city name.</p>'
@@ -28,6 +28,10 @@ form.addEventListener("submit", async(event) => {
 
         weatherResult.innerHTML = `
         <h2>${data.name}, ${data.sys.country}</h2>
+        <div class="results">
+            <i class="fa-solid fa-temperature-three-quarters"></i>
+            <p>Temperature: ${data.main.temp}°F</p>
+        </div>
         `
     } catch {
 

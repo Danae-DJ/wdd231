@@ -38,9 +38,13 @@ form.addEventListener("submit", async(event) => {
                 <p>weather:${data.weather[0].description}</p>
             </div>
             <div class="weatherResult">
-                
+                <i class="fa-solid fa-droplet"></i>
+                <p>Humidity: ${data.main.humidity}%</p>
             </div>
-            <div class="weatherResult"></div>
+            <div class="weatherResult">
+                <i class="fa-solid fa-wind"></i>
+                <p>Wind speed: ${data.wind.speed}</p>
+            </div>
         </div>
         `
     } catch {

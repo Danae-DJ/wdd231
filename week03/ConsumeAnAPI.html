@@ -1,14 +1,40 @@
-<!--ConsumeAnAPI.html:-->
+<!--ConsumeAnAPI.html:  tutorial video:https://www.youtube.com/watch?v=aUfRnjLeImA  -->
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/Api.css">
     <script src="scripts/Api.js" type=""></script>
+    
 </head>
 <body>
+  <div class="container">
+    <h1>Weather App</h1>
+    <form id="weatherform">
+      <input type="text" id="cityInput" placeholder="Enter a city name">
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherResults">
+      <!--Weather will appear here-->
+    </div>
+  </div>
 
+<footer>
+  Dánae De la Cruz | OpenWeatherMap.org | CC BY-SA 4.0
+</footer>
+
+</body>
+</html>
+
+
+
+<!--activity of class: I really I don't understand anything of this...
     <h1>OpenWeatherMap.org API Test</h1>
 <main>
   <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
@@ -16,10 +42,4 @@
     <img id="weather-icon" src="" alt="">
     <figcaption></figcaption>
   </figure>
-</main>
-<footer>
-  Dánae De la Cruz | OpenWeatherMap.org | CC BY-SA 4.0
-</footer>
-
-</body>
-</html>
+</main>-->

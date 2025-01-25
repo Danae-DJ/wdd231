@@ -1,4 +1,28 @@
 //Api.js:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
@@ -31,3 +55,4 @@ function displayResults(data) {
   apiFetch();
 
   //continue the activite videos: https://weblabs.spartandesignuniversity.com/current-weather-api.php 
+  */

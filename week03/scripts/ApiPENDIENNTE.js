@@ -29,3 +29,5 @@ function displayResults(data) {
   }
 
   apiFetch();
+
+  //continue the activite videos: https://weblabs.spartandesignuniversity.com/current-weather-api.php 

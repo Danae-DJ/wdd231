@@ -246,22 +246,62 @@ div {
 }
 
 /* Footer */
+/* General Footer Styling */
 footer {
     background-color: var(--blue);
     color: var(--color2);
+    padding: 2rem;
     text-align: center;
-    padding: 1.5rem;
     font-size: 0.9rem;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer p {
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footer-contact, .footer-social {
+    flex: 1;
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+.footer-contact h4, .footer-social h4 {
     margin-bottom: 0.5rem;
-}
-
-footer .highlight {
+    font-size: 1.1rem;
     color: var(--color2);
 }
+
+.footer-contact p, .footer-contact a {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: var(--color2);
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.footer-social img {
+    width: 52px;
+    height: 52px;
+    transition: transform 0.3s ease;
+    background-color: var(--color2);
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
 
 /* Hide the nav menu by default for smaller screens */
 #navLinks {

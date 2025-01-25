@@ -1,12 +1,38 @@
 //Api.js:
+const form = document.getElementById("weatherform");
+const cityInput = document.getElementById("cityInput");
+const weatherResult = document.getElementById("weatherResults");
 
+const API_KEY = '330d0457c38e79f15dd5eab574628d9b'
 
+form.addEventListener("submit", async(event) => {
+    event.preventDefault();
 
+    const city = cityInput.ariaValueMax.trim();
 
+    if (!city) {
+        weatherResult.innerHTML ='<p>Please enter a city name.</p>'
+        return;
+    }
 
+    try {
+        const response = await fetch(  
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`//"&units=imperial" or "&units=metric"
+        );
 
+        if (!response.ok) {
+            throw Error('City Not Found')
+        }
 
+        const data = await response.json();
 
+        weatherResult.innerHTML = `
+        <h2>${data.name}, ${data.sys.country}</h2>
+        `
+    } catch {
+
+    }
+})
 
 
 

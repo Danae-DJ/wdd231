@@ -44,13 +44,13 @@
             <button id="Tickets">Get Keynote Tickets</button>
         </section>
         <section class="action">
-            <h3>Join Us</h3>
+            <h2>Join Us</h2>
             <!--invitation to join us and membership benefits list-->
-            <div>
+            <div class="purpose">
                 <h4>Who are we?</h4>
                 <p>Our primary purpose of a Chamber of Commerce is to support, represent, and promote the interests of businesses within a specific region or industry. It acts as a bridge between businesses, government agencies, and the local community to create a favorable environment for economic growth and business development.</p>
             </div>
-            <div>
+            <div class="benefits">
                 <h4>Our Benefits</h4>
                 <ol>
                     <li>Networking Opportunities:
@@ -71,19 +71,28 @@
             </div>
             <!--Add button to inscription's form:https://danae-dj.github.io/wdd231/chamber/callToAction.html -->
         </section>
+        
         <section class="Events">
             <div class="news">
             <h3>News & Events</h3>
              <!--added cards with: images(click to url), notes (by part newsEvents.json) about notices; -->
             </div>
         
-        <div class="">
-            <h3>Current Weather</h3>
-            <figure>
-                <img src="images/weather.svg" alt="Weather Icon" width="50" loading="lazy">
-            </figure>
-            <p id="currentWeather"></p>
-        </div>
+        
+            <div class="container">
+                <h3>Current Weather</h3>
+                <figure>
+                    <img src="images/weather.svg" alt="Weather Icon" width="50" loading="lazy">
+                </figure>
+                <form id="weatherform">
+                <label for="cityInput" class="visually-hidden">City</label>
+                <input type="text" id="cityInput" placeholder="Enter a city name" aria-label="City">
+                <button type="submit">Get Weather</button>
+                </form>
+                <div id="weatherResults">
+                <!--Weather will appear here-->
+                </div>
+            </div>
         </section>
 
         <section class="pathers">

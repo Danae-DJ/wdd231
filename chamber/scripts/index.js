@@ -28,13 +28,78 @@ if (viewToggle) {
     viewToggle.addEventListener('click', toggleView);
 }
 
+//Current Weather
+const form = document.getElementById("weatherform");
+const cityInput = document.getElementById("cityInput");
+const weatherResult = document.getElementById("weatherResults");
+
+const API_KEY = '330d0457c38e79f15dd5eab574628d9b';
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const city = cityInput.value.trim();
+
+    if (!city) {
+        weatherResult.innerHTML = '<p>Please enter a city name.</p>';
+        return;
+    }
+
+    // Display loading message while fetching data
+    weatherResult.innerHTML = '<p>Loading...</p>';
+
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial` // "&units=imperial" for Fahrenheit or "&units=metric" for Celsius
+        );
+
+        if (!response.ok) {
+            throw Error('City Not Found');
+        }
+
+        const data = await response.json();
+
+        // Display the weather results
+        displayWeatherResults(data);
+
+        // Clear the input field after fetching
+        cityInput.value = '';
+    } catch (error) {
+        weatherResult.innerHTML = `<p>Error: ${error.message}</p>`;
+    }
+});
+
+function displayWeatherResults(data) {
+    const iconSrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+    // Helper function to create weather result elements
+    const createWeatherElement = (icon, label, value) => `
+        <div class="weatherResult">
+            <i class="${icon}"></i>
+            <p>${label}: ${value}</p>
+        </div>
+    `;
+
+    weatherResult.innerHTML = `
+        <h2>${data.name}, ${data.sys.country}</h2>
+        <div class="results">
+            ${createWeatherElement('fa-solid fa-temperature-three-quarters', 'Temperature', `${data.main.temp}°F`)}
+            <div class="weatherResult">
+                <img src="${iconSrc}" alt="${data.weather[0].description}" />
+                <p>${data.weather[0].description}</p>
+            </div>
+            ${createWeatherElement('fa-solid fa-droplet', 'Humidity', `${data.main.humidity}%`)}
+            ${createWeatherElement('fa-solid fa-wind', 'Wind Speed', `${data.wind.speed} mph`)}
+        </div>
+    `;
+}
+
+
+
+
+
 // Fetch and display members
-/* one option to work it
-async function fetchMembers() {
-    const response = await fetch('./data/members.json');
-    const data = await response.json();
-    displayMembers(data.Busines);
-}  second option in case of issues (it's better):*/
+
 const membersDocument_url = './data/members.json';
 async function fetchMembers() {
     const cardsContainer = document.getElementById('cards');

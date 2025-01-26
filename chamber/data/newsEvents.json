@@ -1,41 +1,33 @@
 
 {
-    "Busines": [
+    "News": [
         {
-            "businesName": "Business One",
-            "businessTagline": "Excellence in Service",
-            "email": "info@businessone.com",
-            "phone": "123-456-7890",
-            "URL": "https://businessone.com",
-            "Image":"images/building1.webp",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/30320972/"
+            "newsName": "Business regularization: The Key",
+            "newsGenre": "Improving Government",
+            "writter": "Rachel Ledbetter",
+            "Image":"images/building4.webp",
+            "URL": "https://www.uschamber.com/improving-government/overregulation-is-crippling-business-getting-regulations-right-is-the-key-to-growth"
         },
         {
-            "businesName": "Business Two",
-            "businessTagline": "Innovating Solutions",
-            "email": "contact@businesstwo.com",
-            "phone": "987-654-3210",
-            "URL": "https://businesstwo.com",
-            "Image": "images/building2.webp",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/30320991/"
+            "newsName": "Growth and Opportunities",
+            "newsGenre": "Economy",
+            "writter": "Neil Bradley",
+            "Image":"images/building5.webp",
+            "URL": "https://www.uschamber.com/improving-government/the-growth-and-opportunity-imperative-for-america"
         },
         {
-            "businesName": "Business Three",
-            "businessTagline": "Experience Supports Us",
-            "email": "info@businessthree.com",
-            "phone": "126-876-7090",
-            "URL": "https://businessthree.com",
-            "Image": "images/building3.webp",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/edificios-de-gran-altura-blancos-y-marrones-3600568/"
+            "newsName": "Business 2025",
+            "newsGenre": "Economy",
+            "writter": "Thaddeus Swanek",
+            "Image":"images/building6.webp",
+            "URL": "https://www.uschamber.com/economy/state-of-american-business-2025-all-business-is-local"
         },
         {
-            "businesName": "Business Four",
-            "businessTagline": "We Evolve With You",
-            "email": "contact@businessfour.com",
-            "phone": "117-954-3060",
-            "URL": "https://businessfour.com",
-            "Image": "images/building4.jpeg",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/ciudad-calle-reflejo-reflexion-25798088/"
+           "newsName": "The Influential Company shakes hands with the Environment",
+            "newsGenre": "Conference Event",
+            "writter": "John Reader",
+            "Image":"images/pexels-weekendplayer-187041.webp",
+            "URL": "https://www.uschamber.com/improving-government/overregulation-is-crippling-business-getting-regulations-right-is-the-key-to-growth"
         }
 
     ]

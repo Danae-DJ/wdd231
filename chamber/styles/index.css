@@ -154,11 +154,11 @@ div {
 }
 
 /*Subcribe Button */
-#buttonSub {
+#buttonSub,  #buttonSubs{
     border: none;
 }
 
-#buttonSub button {
+#buttonSub button,  #buttonSubs button{
     background-color: var(--blue);
     color: var(--color2);
     padding: 0.75rem 1.5rem;
@@ -170,7 +170,7 @@ div {
     transition: background-color 0.3s ease;
 }
 
-.buttonSub button{
+.buttonSub button, .buttonSubs button{
     background-color: var(--blue-7);
 }
 /*Events sections*/

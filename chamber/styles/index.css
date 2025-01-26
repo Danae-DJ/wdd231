@@ -329,6 +329,83 @@ div {
 }
 
 
+/* Directory Cards */
+
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    border: none;
+}
+
+.card {
+    background-color: var(--color2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    color: var(--color1);
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--color3);
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+#cards.list {
+    display: block; /* Use block layout for list */
+}
+#cards.list .card {
+    display: flex; /* Align items horizontally */
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+#cards.list .card img {
+    width: 100px; /* Adjust image size for list */
+    height: auto;
+}
+#cards.list .card h3 {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+
+
+
 /* Toggle Button */
 #viewToggle {
     display: block;

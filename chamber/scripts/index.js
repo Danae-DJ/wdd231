@@ -100,7 +100,7 @@ function displayWeatherResults(data) {
 
 // Fetch and display members
 
-const membersDocument_url = './data/members.json';
+const membersDocument_url = './data/membersIndex.json';
 async function fetchMembers() {
     const cardsContainer = document.getElementById('cards');
     cardsContainer.innerHTML='<p>Loading members...</p>'

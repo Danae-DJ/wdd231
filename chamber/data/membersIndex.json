@@ -1,0 +1,34 @@
+
+{
+    "Busines": [
+        {
+            "businesName": "Business One",
+            "businessTagline": "Excellence in Service",
+            "email": "info@businessone.com",
+            "phone": "123-456-7890",
+            "URL": "https://businessone.com",
+            "Image":"images/building1.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320972/"
+        },
+        {
+            "businesName": "Business Two",
+            "businessTagline": "Innovating Solutions",
+            "email": "contact@businesstwo.com",
+            "phone": "987-654-3210",
+            "URL": "https://businesstwo.com",
+            "Image": "images/building2.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320991/"
+        },
+        {
+            "businesName": "Business Three",
+            "businessTagline": "Experience Supports Us",
+            "email": "info@businessthree.com",
+            "phone": "126-876-7090",
+            "URL": "https://businessthree.com",
+            "Image": "images/building3.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/edificios-de-gran-altura-blancos-y-marrones-3600568/"
+        }
+
+    ]
+}
+    

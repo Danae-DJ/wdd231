@@ -1,4 +1,4 @@
-//directory.js:
+//index.js:
 // Set current year in footer
 const yearSpan = document.getElementById('currentYear');
 yearSpan.textContent = new Date().getFullYear();
@@ -135,3 +135,42 @@ function displayMembers(members) {
 
 
 fetchMembers();
+
+
+// Fetch and display news events
+const newsDocumentUrl = './data/newsEvents.json';
+
+async function fetchNews() {
+    const newsContainer = document.getElementById('newsCards');
+    newsContainer.innerHTML = '<p>Loading news...</p>';
+    try {
+        const response = await fetch(newsDocumentUrl);
+        if (!response.ok) throw new Error('Failed to fetch news');
+        const data = await response.json();
+        displayNews(data.News);
+    } catch (error) {
+        console.error('Error:', error);
+        newsContainer.innerHTML = '<p>Unable to load news. Please try again later.</p>';
+    }
+}
+
+function displayNews(newsList) {
+    const newsContainer = document.getElementById('newsCards');
+    newsContainer.innerHTML = ''; // Clear previous content
+
+    newsList.forEach(news => {
+        const newsCard = document.createElement('div');
+        newsCard.className = 'news-card';
+        newsCard.innerHTML = `
+            <img src="${news.Image || 'images/default-image.jpg'}" alt="${news.newsName || 'News'}" loading="lazy">
+            <h3>${news.newsName || 'News Title Not Available'}</h3>
+            <p>Genre: ${news.newsGenre || 'Not Specified'}</p>
+            <p>By: ${news.writter || 'Unknown Author'}</p>
+            <a href="${news.URL || '#'}" target="_blank">${news.URL ? 'Read More' : 'No URL Available'}</a>
+        `;
+        newsContainer.appendChild(newsCard);
+    });
+}
+
+// Initialize fetching of news
+fetchNews();

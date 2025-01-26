@@ -140,6 +140,14 @@ div {
     padding: 20px;
 }
 
+/*action section*/
+.action section{
+    display: flex;
+    justify-content: space-around;
+}
+/*Events sections*/
+
+/* div */
 
 
 /* Toggle Button */

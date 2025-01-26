@@ -36,27 +36,7 @@
             "URL": "https://businessfour.com",
             "Image": "images/building4.jpeg",
             "referenc3mail":"https://www.pexels.com/es-es/foto/ciudad-calle-reflejo-reflexion-25798088/"
-        },
-        {
-            "businesName": "Business Five",
-            "businessTagline": "We Have The Answer",
-            "email": "contact@businessfive.com",
-            "phone": "244-174-8064",
-            "URL": "https://businessfive.com",
-            "Image": "images/building5.jpeg",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/estatua-de-tres-delfines-azules-frente-al-agua-cerca-del-edificio-1458457/"
         }
-        ,
-        {
-            "businesName": "Business Six",
-            "businessTagline": "You Are Our Boss",
-            "email": "contact@businesssix.com",
-            "phone": "312-977-1115",
-            "URL": "https://businesssix.com",
-            "Image": "images/building6.jpeg",
-            "referenc3mail":"https://www.pexels.com/es-es/foto/estatua-de-tres-delfines-azules-frente-al-agua-cerca-del-edificio-1458457/"
-        }
-
 
     ]
 }

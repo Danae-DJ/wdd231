@@ -41,7 +41,7 @@ form.addEventListener("submit", async (event) => {
     const city = cityInput.value.trim();
 
     if (!city) {
-        weatherResult.innerHTML = '<p>Please enter a city name.</p>';
+        weatherResult.innerHTML = '<div class="error-message fade-in">Please enter a city name.</div>';
         return;
     }
 
@@ -65,7 +65,7 @@ form.addEventListener("submit", async (event) => {
         // Clear the input field after fetching
         cityInput.value = '';
     } catch (error) {
-        weatherResult.innerHTML = `<p>Error: ${error.message}</p>`;
+        weatherResult.innerHTML = `<div class="error-message fade-in">Error: ${error.message}</div>`;
     }
 });
 

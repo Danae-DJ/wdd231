@@ -30,18 +30,18 @@ function renderCourses(filter = 'all') {
         courseCard.innerHTML = `
             <h3>${course.code} - ${course.name}</h3>
             <p>Credits: ${course.credits}</p>
-        `;
-        courseCard.addEventListener('click',() => openCourseDetails(course.code)); //attach click event
+            <button onclick="openCourseDetails('${course.code}')"> Details </button>
+        `;//button by dialog
         courseContainer.appendChild(courseCard);
     });
 
     calculateTotalCredits(filter); // Update total credits when courses are rendered
 }
-//dialog
+//add details into button
 function openCourseDetails(courseCode) {
     const dialog = document.getElementById('course-details');
     const course = courses.find(c => c.code === courseCode);
-    if (course)  {
+    if (course) {
         const dialogContent = document.getElementById('dialog-content');
         dialogContent.innerHTML = `
             <h2>${course.code} - ${course.name}</h2>
@@ -51,20 +51,53 @@ function openCourseDetails(courseCode) {
         dialog.showModal(); // Open the dialog
     }
 }
-/*/closed the dialog
+
 document.getElementById('close-dialog').addEventListener('click', function () {
     const dialog = document.getElementById('course-details');
     dialog.close(); // Close the dialog
-});*/
-
-// Optional: Close dialog when clicking outside it
-document.getElementById('course-details').addEventListener('click', function (e) {
-    const dialog = document.getElementById('course-details');
-    if (e.target === dialog) {
-        dialog.close();
-    }
 });
 
+/* for this option of dialog is necessary this type of html:
+<section class="course">
+    <h2>Web and Computer Programming Certificate</h2>
+    <div id="courseContainer"></div>
+    <div id="filterButtons">
+        <button onclick="filterCourses('all')">All Courses</button>
+        <button onclick="filterCourses('WDD')">WDD Courses</button>
+        <button onclick="filterCourses('CSE')">CSE Courses</button>
+    </div>
+    <p id="totalCredits"></p>
+    <!--Added dialog for course-->
+    <dialog id="course-details">
+        <div id="dialog-content"></div>
+        <button id="close-dialog">Close</button>
+    </dialog>
+</section>
+
+This for css:
+dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#close-dialog {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+            */
 
 
 function filterCourses(filter) {
@@ -73,6 +106,8 @@ function filterCourses(filter) {
         button.classList.toggle('active', button.textContent.includes(filter));
     });
 }
+
+
 
 function calculateTotalCredits(filter = 'all') {
     const totalCredits = courses

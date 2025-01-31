@@ -1,40 +1,23 @@
-//Grab the entire URL for this page including the attached GET values
-const currentUrl = window.location.href;
-console.long(currentUrl);
+// Grab the query string from the URL (everything after ?)
+const params = new URLSearchParams(window.location.search);
 
-//Divide the url into two halves
-const everything=currentUrl.split('#')
-console.log(everything)
+// Function to safely retrieve form values
+function show(key) {
+    return params.get(key) || 'Not provided'; // Default message if key is missing
+}
 
-/* option 1:
-//Grab just the second half
-let formData = everything[1];
-console.log(formData)
-
-//Break the form value pairs into  an array
-formData=formData.split('¿')
-console.log(formData)
+// Inject form data into the results div
+const showInfo = document.querySelector('#results');
+showInfo.innerHTML = `  
+    <p>Appointment for ${show("first")} ${show("last")}</p>
+    <p>Proxy ${show('ordinance')} on ${show('fecha')} in the ${show('location')}</p>
+    <p>Your Phone: ${show('phone')}</p>
+    <p>Your Email: ${show('email')}</p>
+`;
+/*
+The URLSearchParams interface makes it easy to work with 
+query parameters in a URL. Instead of manually splitting 
+the string using .split('?') and .split('&'), this method 
+handles everything for you.
 */
-// option 2: Grab just the second half 
-// and Break the form value pairs into  an array
-let formData = everything[1].split('¿')
-console.log(formData)
-
-function show(){
-    console.log(cup)
-    formData.forEach((element) => {
-        if (element.startsWith(cup)) {
-            result=element.split('K') //console.log("Found a Macth")
-            result=result[1]
-        }// end if
-    })
-    return(result)
-}// end show
-
-
-const showInfo = document.querySelector('#results')
-showInfo.innerHTML = show("phone") //formData[0] + formData[1]
-
-//show("phone")
-
 //tutorial video: https://video.byui.edu/media/t/1_fo78nelv

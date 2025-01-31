@@ -47,14 +47,12 @@ h2 {
 
 /*animation name*/
 .name {
-    animation: bounce 4s;
+    animation: bounce 4s; /*animation-name: bounce;*/
     animation-iteration-count: initial;
+/*optional in this case: transform-origin: center bottom;*/
 }
 
-/*.bounce {
-    animation-name: bounce;
-    transform-origin: center bottom;
-  }*/
+
 
 @keyframes bounce {
     from,

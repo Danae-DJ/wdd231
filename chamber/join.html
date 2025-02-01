@@ -1,53 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web Lab Start File">
-  <meta name="author" content="Paul Cheney">
-
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
-
-  <title>Web Lab Start File</title>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Chamber of Commerce Join Page</title>
+        <meta property="og:title" content="WDD231 | The Chamber of Commerce Index Page">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://danae-dj.github.io/wdd231/chamber/images/pexels-rdne-7841845.webp"> 
+        <meta property="og:url" content="https://danae-dj.github.io/wdd231/chamber/directory.html">
+        <meta name="description" content="Promoting the business interests of its members in Rexburg, Idaho.">
+        <meta name="author" content="Dánae De la Cruz Jiménez">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/join.css">
+        <script src="scripts/join.js" defer></script>
+        <link rel="icon" href="favicon.ico">
 </head>
-
 <body>
+    <header>
+        <div class="title">
+            <h1>Rexburg Idaho</h1>
+            <h4>Chamber of Commerce</h4>
+            <figure>
+                <img src="images/global-markets-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
+            </figure>
+        </div>
+        <nav>
+            <button id="menuToggle">☰</button>
+            <ul id="navLinks">
+                <li><a href="index.html" class="current" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li><a href="directory.html" target="_blank" rel="noopener noreferrer">Directory</a></li>
+                <li><a href="join.html" target="_blank" rel="noopener noreferrer">Join</a></li>
+                <li><a href="discover.html" target="_blank" rel="noopener noreferrer">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
   <main>
-    <h1>Temple Appointment</h1>
+    <h3>Join Us</h3>
+    <p>Are you ready to join us? You can start responding the next form:</p>
+    <figure>
+        <img src="images/global-markets-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
+    </figure>
 
     <form method="GET" action="thanks.html" class="designOne">
-      <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-        <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
-  
+        <fieldset class="personal">
+        <legend>Personal Data</legend>
+        <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"required></label>
+        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"required></label>
+        <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" required></label>
+        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" required></label>
+        <label>Organizational Title <input type="text" name="organizational" required autocomplete="organizational-title" title="Your Organizational Title" required></label>
+        </fieldset>
 
-        <h3>Select Ordinance</h3>
-        <label><input type="radio" name="ordinance" value="Baptism" checked> Proxy Baptism</label>
-        <label><input type="radio" name="ordinance" value="Initiatory"> Proxy Initiatory</label>
-        <label><input type="radio" name="ordinance" value="Endowment"> Proxy Endowment</label>
-        <label><input type="radio" name="ordinance" value="Sealing"> Proxy Sealing</label>
-
+        <fieldset class="membership">
+        <legend>Membership</legend>
+        <p>If you need to remember which are our memberships: <a href="membership.html" target="_blank">Do click Here</a>.</p>
+        <label><input type="radio" name=" level" value="NP-Members" checked> NP Membership</label>
+        <label><input type="radio" name=" level" value="Bronze-Membership"> Bronze Membership</label>
+        <label><input type="radio" name=" level" value="Silver Membership"> Silver Membership</label>
+        <label><input type="radio" name=" level" value="Gold-Membership"> Gold Membership</label>
+        </fieldset>
         
-        <h3>Date and Location</h3>
-        <label>Date <input type="date" name="fecha" required></label>
-
+        <fieldset class="business">
+        <legend>Data Business</legend>
+        <label>Business Name <input type="text" name="Business Name" required autocomplete="organization" title="Your Business Name" ></label>
+        <label>Business Tagline <input type="text" name="business tagline" required autocomplete="tagline" title="Your business tagline" ></label>
+        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" ></label>
+        <label>Cell/Tel Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+        <label>URL<input type="url" name="url" required placeholder="https://business.com"  title="Your URL" autocomplete="url" ></label>
+       
+        
         <label>Location
           <select name="location" required>
             <option value="">None</option>
-            <option value="Payson">Payson</option>
-            <option value="Orem">Orem</option>
-            <option value="Provo City Center">Provo City Center</option>
+            <option value="Payson">Local</option>
+            <option value="Orem">Stake</option>
+            <option value="Provo City Center">International</option>
         </label>
 
+        <label>Date <input type="date" name="fecha" required></label>
+
+        </fieldset>
         <input type="submit" value="Schedule An Appointment">
     </form>
 
     
   </main>
+  <footer>
+    <div class="footer-container">
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><strong>Rexburg Idaho</strong></p>
+            <p>Chamber of Commerce</p>
+            <figure>
+                <img src="images/global-markets-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
+            </figure>
+            <p><strong>Address:</strong> 123 Commerce St, Rexburg, Idaho</p>
+            <p><strong>Phone:</strong> +01 123 456 7890</p>
+            <p><strong>Email:</strong> <a href="mailto:danae@example.com">danae@example.com</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/521234567890">+52 123 456 7890</a></p>
+            <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com" target="_blank"><img src="images/492997_facebook_social_icon.svg" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/492996_social_twitter_icon.svg" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/1242852_instagram_social_social_media_icon.svg" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <p>&copy; <span id="currentYear"></span> Dánae De la Cruz Jiménez | Mexico</p>
+    <p id="lastModified"></p>
+</footer>
 
 </body>
 </html>

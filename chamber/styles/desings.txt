@@ -1,0 +1,90 @@
+my images someting needs changes depending of color, desing of page or words, 
+this are some options...
+
+Option 1: Add a Semi-Transparent Background to the <p>
+This will make the text readable without changing the background image too much.
+
+CSS:
+css
+Copiar código
+#levels p {
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: white; /* Ensure text is readable */
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+💡 This creates a dark overlay behind the text without affecting the entire section.
+
+Option 2: Add an Overlay Layer to the Entire #levels Section
+This approach makes the whole background a bit darker while keeping text readable.
+
+CSS:
+css
+Copiar código
+#levels {
+    position: relative;
+    background: url("../images/person.webp") no-repeat center center/cover;
+}
+
+#levels::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+#levels h2, #levels p {
+    position: relative;
+    color: white; /* Text stands out */
+    z-index: 1; /* Places text above overlay */
+    padding: 20px;
+}
+💡 This makes the entire section slightly darker while keeping the text fully readable.
+
+Option 3: Adjust the Image Opacity (Alternative)
+If you don’t want an overlay, you can make the background image itself more transparent.
+
+CSS:
+css
+Copiar código
+#levels {
+    background: url("../images/person.webp") no-repeat center center/cover;
+    opacity: 0.8; /* Reduce image visibility */
+}
+💡 Be careful with this method—it makes everything (including text) slightly transparent.
+
+
+
+4 option:
+To add an opaque overlay to your background image, you can use a ::before pseudo-element. Here’s how you can do it:
+
+Updated CSS for #levels
+css
+Copiar código
+#levels {
+    position: relative;
+    background: url("../images/person.webp") no-repeat center center/cover;
+    color: white; /* Ensures text is readable */
+    padding: 2rem;
+}
+
+#levels::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+#levels p {
+    position: relative;
+    z-index: 1; /* Ensures text is above the overlay */
+}
+This method keeps the image visible but ensures the text is easy to read.

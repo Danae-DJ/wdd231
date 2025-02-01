@@ -1,3 +1,4 @@
+<!--join.html-->
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -39,54 +40,135 @@
     </header>
 
   <main>
-    <h3>Join Us</h3>
-    <p>Are you ready to join us? You can start responding the next form:</p>
+    <h1>Join Us</h1>
     <figure>
         <img src="images/global-markets-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
     </figure>
 
-    <form method="GET" action="thanks.html" class="designOne">
-        <fieldset class="personal">
-        <legend>Personal Data</legend>
-        <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"required></label>
-        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"required></label>
-        <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" required></label>
-        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" required></label>
-        <label>Organizational Title <input type="text" name="organizational" required autocomplete="organizational-title" title="Your Organizational Title" required></label>
-        </fieldset>
+    <section id="levels">
+        <h2>Why us?</h2>
+        <p>
+            In the chamber of commerce, they consider us a family, but we are more than that; we are a reliable, direct and proud organization; We seek success in commercial development.
+            Each merchant has different standards and goals, but without a doubt these differences allow the development of businesses with the personality that distinguishes them, as well as each of our partners and other collaborators.
+            In order to help you, we offer you our service in the form of memberships, get to know them and don't delay in 
+            <a href="#inscription">joining us</a>.
+        </p>
+    </section>
 
-        <fieldset class="membership">
-        <legend>Membership</legend>
-        <p>If you need to remember which are our memberships: <a href="membership.html" target="_blank">Do click Here</a>.</p>
-        <label><input type="radio" name=" level" value="NP-Members" checked> NP Membership</label>
-        <label><input type="radio" name=" level" value="Bronze-Membership"> Bronze Membership</label>
-        <label><input type="radio" name=" level" value="Silver Membership"> Silver Membership</label>
-        <label><input type="radio" name=" level" value="Gold-Membership"> Gold Membership</label>
-        </fieldset>
+
+        <!-- Membership Cards -->
+    <section class="membership-cards">
+        <div class="card" id="np-card">
+            <h3>NP Membership</h3>
+            <p>No fee, best for non-profits.</p>
+            <button onclick="openModal('np-modal')">Learn More</button>
+        </div>
+        <div class="card" id="bronze-card">
+            <h3>Bronze Membership</h3>
+            <p>Basic benefits at an affordable price.</p>
+            <button onclick="openModal('bronze-modal')">Learn More</button>
+        </div>
+        <div class="card" id="silver-card">
+            <h3>Silver Membership</h3>
+            <p>Enhanced visibility and networking.</p>
+            <button onclick="openModal('silver-modal')">Learn More</button>
+        </div>
+        <div class="card" id="gold-card">
+            <h3>Gold Membership</h3>
+            <p>Premium perks and advertising benefits.</p>
+            <button onclick="openModal('gold-modal')">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal" id="np-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('np-modal')">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <p>No fees, access to networking events, and community support.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="bronze-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <p>Basic event access, small business networking, and directory listing.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="silver-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <p>Marketing support, premium directory listing, and discounted event tickets.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="gold-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <p>Exclusive networking, priority sponsorships, and advertising opportunities.</p>
+        </div>
+    </div>
+
+    </section>
+
+
+    <section id="inscription">
+    <h3>Are you ready to join us? You can start responding the next form:</h3>
+        <form method="GET" action="thanks.html" class="designOne">
+            <fieldset class="personal">
+            <legend>Personal Data</legend>
+            <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+            <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" ></label>
+            <label>Organizational Title <input type="text" name="organizational" autocomplete="organization-title" title="Your Organizational Title" pattern="[A-Za-z\s-]{7,}"></label>
+            </fieldset>
+
+            <fieldset class="membership">
+            <legend>Membership</legend>
+            <p>If you need to remember which are our memberships: <a href="#levels">Do click Here</a>.</p>
+            <label><input type="radio" name="level" value="NP-Members" checked> NP Membership</label>
+            <label><input type="radio" name="level" value="Bronze-Membership"> Bronze Membership</label>
+            <label><input type="radio" name="level" value="Silver-Membership"> Silver Membership</label>
+            <label><input type="radio" name="level" value="Gold-Membership"> Gold Membership</label>
+            </fieldset>
+            
+            <fieldset class="business">
+            <legend>Data Business</legend>
+            <label>Business Name <input type="text" name="Business Name" required autocomplete="organization" title="Your Business Name" ></label>
+            <label>Business Tagline <input type="text" name="business tagline" required autocomplete="tagline" title="Your business tagline" ></label>
+            <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" ></label>
+            <label>Cell/Tel Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+            <label>URL<input type="url" name="url" required placeholder="https://business.com"  title="Your URL" autocomplete="url" ></label>
         
-        <fieldset class="business">
-        <legend>Data Business</legend>
-        <label>Business Name <input type="text" name="Business Name" required autocomplete="organization" title="Your Business Name" ></label>
-        <label>Business Tagline <input type="text" name="business tagline" required autocomplete="tagline" title="Your business tagline" ></label>
-        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email" ></label>
-        <label>Cell/Tel Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
-        <label>URL<input type="url" name="url" required placeholder="https://business.com"  title="Your URL" autocomplete="url" ></label>
-       
-        
-        <label>Location
-          <select name="location" required>
-            <option value="">None</option>
-            <option value="Payson">Local</option>
-            <option value="Orem">Stake</option>
-            <option value="Provo City Center">International</option>
-        </label>
+            
+            <label>Location
+            <select name="location" required>
+                <option value="">None</option>
+                <option value="Local">Local</option>
+                <option value="Stake">Stake</option>
+                <option value="International">International</option>
+            </select>
+            </label>
 
-        <label>Date <input type="date" name="fecha" required></label>
+            <label for="description">Give us a brief description of your business.</label>
+            
+            <textarea id="description" name="description" rows="5" cols="33">Write, for example, the purpose, benefits or services your business provides.
+            </textarea>
+            
+            <label>Date <input type="date" name="fecha" required></label>
+            
+            <input type="hidden" id="timestamp" name="timestamp">
+            <script>document.getElementById('timestamp').value = new Date().toISOString();</script>
 
-        </fieldset>
-        <input type="submit" value="Schedule An Appointment">
-    </form>
-
+            </fieldset>
+            <input type="submit" value="submit">
+        </form>
+    </section>
     
   </main>
   <footer>
@@ -114,7 +196,7 @@
     </div>
 
     <p>&copy; <span id="currentYear"></span> Dánae De la Cruz Jiménez | Mexico</p>
-    <p id="lastModified"></p>
+<p id="lastModified"></p>
 </footer>
 
 </body>

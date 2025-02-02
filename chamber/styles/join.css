@@ -145,7 +145,6 @@ div {
 #levels h2, #levels p {
     position: relative;
     color: white; /* Text stands out */
-    z-index: 1; /* Places text above overlay */
     padding: 20px;
 }
 

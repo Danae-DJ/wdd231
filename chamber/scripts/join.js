@@ -33,12 +33,6 @@ window.onclick = function(event) {
     });
 }
 
-
-
-
-
-
-
 // Grab the query string from the URL (everything after ?)
 const params = new URLSearchParams(window.location.search);
 

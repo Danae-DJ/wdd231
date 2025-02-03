@@ -2,9 +2,23 @@
     "Associates": [
         {
             "company": "Coca cola",
-            "type": "supplier",
-            "level": "bronze membership",
+            "type": "Supplier",
+            "levelAccess": "Bronze membership",
             "image": "images/soda.webp"
-        }   
+        },
+
+        {
+            "company": "HSBC Bank",
+            "type": "Creditor",
+            "levelAccess": "MN membership",
+            "image": "images/soda.webp"
+        }, 
+
+        {
+            "company": "Apples Farm",
+            "type": "Supplier",
+            "levelAccess": "Golden membership",
+            "image": "images/soda.webp"
+        }
     ]
 }

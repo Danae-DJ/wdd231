@@ -1,11 +1,61 @@
 {
     "Busines": [
-        {   "businesName": "Business Two",
-            "businessTagline": "Innovating Solutions",
+        {
+            "businesName": "Business One",
+            "businessTagline": "Excellence in Service",
+            "email": "info@businessone.com",
+            "phone": "123-456-7890",
+            "URL": "https://businessone.com",
+            "Image":"images/bupexels-theo-30488545.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320972/"
+        },
+        {
+            "businesName": "Business Two",
+            "businessTagline": "Gurmet Solutions",
             "email": "contact@businesstwo.com",
             "phone": "987-654-3210",
             "URL": "https://businesstwo.com",
-            "Image": "images/pexels-hazal-zeynep-322734574-30475029.webp"
+            "Image": "images/pexels-olenkabohovyk-3646171.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/30320991/"
+        },
+        {
+            "businesName": "Business Three",
+            "businessTagline": "Experience Supports Us",
+            "email": "info@businessthree.com",
+            "phone": "126-876-7090",
+            "URL": "https://businessthree.com",
+            "Image": "images/pexels-anntarazevich-7772120.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/edificios-de-gran-altura-blancos-y-marrones-3600568/"
+        },
+        {
+            "businesName": "Business Four",
+            "businessTagline": "We Evolve With You",
+            "email": "contact@businessfour.com",
+            "phone": "117-954-3060",
+            "URL": "https://businessfour.com",
+            "Image": "images/pexels-hazal-zeynep-322734574-30475029.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/ciudad-calle-reflejo-reflexion-25798088/"
+        },
+        {
+            "businesName": "Business Five",
+            "businessTagline": "We Have The Answer",
+            "email": "contact@businessfive.com",
+            "phone": "244-174-8064",
+            "URL": "https://businessfive.com",
+            "Image": "images/pexels-tomfisk-3691103.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/estatua-de-tres-delfines-azules-frente-al-agua-cerca-del-edificio-1458457/"
         }
+        ,
+        {
+            "businesName": "Business Six",
+            "businessTagline": "You Are Our Boss",
+            "email": "contact@businesssix.com",
+            "phone": "312-977-1115",
+            "URL": "https://businesssix.com",
+            "Image": "images/pexels-eva-bronzini-5765839.webp",
+            "referenc3mail":"https://www.pexels.com/es-es/foto/estatua-de-tres-delfines-azules-frente-al-agua-cerca-del-edificio-1458457/"
+        }
+
+
     ]
 }

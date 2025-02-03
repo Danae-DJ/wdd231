@@ -1,11 +1,35 @@
+
 {
     "News": [
         {
             "newsName": "Business regularization: The Key",
-            "newsGenre": "Improving Government",
+            "newsGenre": "Conference Event",
             "writter": "Rachel Ledbetter",
-            "Image":"images/building4.jpeg",
+            "Image":"images/pexels-n-voitkevich-6120182.webp",
+            "URL": "https://www.uschamber.com/improving-government/overregulation-is-crippling-business-getting-regulations-right-is-the-key-to-growth"
+        },
+        {
+            "newsName": "Growth and Opportunities",
+            "newsGenre": "Social Meeting",
+            "writter": "Neil Bradley",
+            "Image":"images/pexels-weekendplayer-187041.webp",
+            "URL": "https://www.uschamber.com/improving-government/the-growth-and-opportunity-imperative-for-america"
+        },
+        {
+            "newsName": "Business 2025",
+            "newsGenre": "Social Meeting",
+            "writter": "Thaddeus Swanek",
+            "Image":"images/person.webp",
+            "URL": "https://www.uschamber.com/economy/state-of-american-business-2025-all-business-is-local"
+        },
+        {
+           "newsName": "The Influential Company shakes hands with the Environment",
+            "newsGenre": "Conference Event",
+            "writter": "John Reader",
+            "Image":"images/pexels-rdne-7841845.webp",
             "URL": "https://www.uschamber.com/improving-government/overregulation-is-crippling-business-getting-regulations-right-is-the-key-to-growth"
         }
+
     ]
 }
+    

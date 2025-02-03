@@ -41,6 +41,7 @@ form.addEventListener("submit", async (event) => {
         );
 
         if (!response.ok) {
+            console.error(`Error fetching weather: ${response.status}`);
             throw Error('City Not Found');
         }
 
@@ -84,26 +85,28 @@ function displayWeatherResults(data) {
 
 //curiosities text-changing
 
-const curiosityDocument_url = './data/curiosities.json';
-async function fetchMembers() {
-    const cardsContainer = document.getElementById('curiosity-text');
-    cardsContainer.innerHTML='<p>Loading curiosities...</p>'
+let curiosities = [];
+
+async function fetchCuriosities() {
     try {
-        const response = await fetch(curiosityDocument_url);
+        const response = await fetch('./data/curiosities.json');
         if (!response.ok) throw new Error('Failed to fetch curiosities');
         const data = await response.json();
-        displayMembers(data.Busines);
+        curiosities = data.Curiosities; // Store the fetched curiosities
+        changeCuriosity(); // Start displaying them
     } catch (error) {
         console.error('Error:', error);
-        cardsContainer.innerHTML = '<p>Unable to load curiosities. Please try again later.</p>';;
     }
 }
 
-let curiosityIndex = 0;
 function changeCuriosity() {
-    document.getElementById("curiosity-text").textContent = curiosities[curiosityIndex];
-    curiosityIndex = (curiosityIndex + 1) % curiosities.length;
+    if (curiosities.length > 0) {
+        document.getElementById("curiosity-text").textContent = curiosities[curiosityIndex];
+        curiosityIndex = (curiosityIndex + 1) % curiosities.length;
+    }
 }
+
+fetchCuriosities();
 setInterval(changeCuriosity, 10000);
 
 
@@ -148,7 +151,7 @@ function displayNews(newsList) {
 fetchNews();
 
 
-// Fetch and display associates
+// Fetch and display associates cards
 
 const membersDocument_url = './data/associates.json';
 async function fetchMembers() {
@@ -158,7 +161,7 @@ async function fetchMembers() {
         const response = await fetch(membersDocument_url);
         if (!response.ok) throw new Error('Failed to fetch associates');
         const data = await response.json();
-        displayMembers(data.Busines);
+        displayMembers(data.Associates);
     } catch (error) {
         console.error('Error:', error);
         cardsContainer.innerHTML = '<p>Unable to load associates. Please try again later.</p>';;
@@ -172,8 +175,9 @@ function displayMembers(members) {
         const cards = document.createElement('div');
         cards.className = 'card';
         cards.innerHTML = `
-            <img src="${member.Image || 'images/default-image.jpg'}" alt="${member.company || 'Business'}" loading="lazy">
+            <img src="${member.image || 'images/default-image.jpg'}" alt="${member.company || 'Business'}" loading="lazy">
             <h3>${member.company || 'Business Name Not Available'}</h3>
+            <p>Type of relationship: ${member.type}</p>
             <p>Benefits within reach with ${member.levelAccess || 'No membreship provided.'}</p>
             <a href="${member.URL || '#'}" target="_blank">${member.URL ? 'Visit Website' : 'No Website'}</a>
         `;

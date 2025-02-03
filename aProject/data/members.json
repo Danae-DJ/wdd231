@@ -1,0 +1,11 @@
+{
+    "Busines": [
+        {   "businesName": "Business Two",
+            "businessTagline": "Innovating Solutions",
+            "email": "contact@businesstwo.com",
+            "phone": "987-654-3210",
+            "URL": "https://businesstwo.com",
+            "Image": "images/pexels-hazal-zeynep-322734574-30475029.webp"
+        }
+    ]
+}

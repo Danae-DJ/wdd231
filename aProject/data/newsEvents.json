@@ -1,0 +1,11 @@
+{
+    "News": [
+        {
+            "newsName": "Business regularization: The Key",
+            "newsGenre": "Improving Government",
+            "writter": "Rachel Ledbetter",
+            "Image":"images/building4.jpeg",
+            "URL": "https://www.uschamber.com/improving-government/overregulation-is-crippling-business-getting-regulations-right-is-the-key-to-growth"
+        }
+    ]
+}

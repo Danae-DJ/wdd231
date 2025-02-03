@@ -1,0 +1,10 @@
+{
+    "Associates": [
+        {
+            "company": "Coca cola",
+            "type": "supplier",
+            "level": "bronze membership",
+            "image": "image/"
+        }   
+    ]
+}

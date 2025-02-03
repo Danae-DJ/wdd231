@@ -4,6 +4,7 @@
             "company": "Coca cola",
             "type": "Supplier",
             "levelAccess": "Bronze membership",
+            "URL" : "https://www.coca-cola.com/mx/es",
             "image": "images/soda.webp"
         },
 
@@ -11,6 +12,7 @@
             "company": "HSBC Bank",
             "type": "Creditor",
             "levelAccess": "MN membership",
+            "URL" :"https://www.hsbc.com.mx/",
             "image": "images/soda.webp"
         }, 
 
@@ -18,6 +20,7 @@
             "company": "Apples Farm",
             "type": "Supplier",
             "levelAccess": "Golden membership",
+            "URL" : "https://www.centralenlinea.com/categorias/manzanas-y-peras?orderby=5",
             "image": "images/soda.webp"
         }
     ]

@@ -4,7 +4,7 @@
         {
             "company": "Coca cola",
             "type": "Supplier",
-            "levelAccess": "Bronze membership",
+            "levelAccess": "Gold membership",
             "URL" : "https://www.coca-cola.com/mx/es",
             "image": "images/soda.webp"
         },
@@ -14,15 +14,15 @@
             "type": "Creditor",
             "levelAccess": "MN membership",
             "URL" :"https://www.hsbc.com.mx/",
-            "image": "images/soda.webp"
+            "image": "images/bank.webp"
         }, 
 
         {
             "company": "Apples Farm",
             "type": "Supplier",
-            "levelAccess": "Golden membership",
+            "levelAccess": "Silver membership",
             "URL" : "https://www.centralenlinea.com/categorias/manzanas-y-peras?orderby=5",
-            "image": "images/soda.webp"
+            "image": "images/apples.webp"
         }
     ]
 }

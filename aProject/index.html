@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="style/index.css">
     <script src="scripts/index.js" defer></script>
     <link rel="icon" href="">
 </head>
@@ -28,15 +28,16 @@
                 <img src="images/crate-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
             </figure>
         </div>
-        <nav>
-            <button id="menuToggle">☰</button>
-            <ul id="navLinks">
-                <li><a href="index.html" class="current" target="_blank" rel="noopener noreferrer">Home</a></li>
-                <li><a href="directory.html" target="_blank" rel="noopener noreferrer">Directory</a></li>
-                <li><a href="join.html" target="_blank" rel="noopener noreferrer">Join</a></li>
-                <li><a href="discover.html" target="_blank" rel="noopener noreferrer">Discover</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <button id="menuToggle">☰</button>
+                <ul id="navLinks">
+                    <li><a href="index.html" class="current" target="_blank" rel="noopener noreferrer">Home</a></li>
+                    <li><a href="directory.html" target="_blank" rel="noopener noreferrer">Directory</a></li>
+                    <li><a href="join.html" target="_blank" rel="noopener noreferrer">Join</a></li>
+                    <li><a href="discover.html" target="_blank" rel="noopener noreferrer">Discover</a></li>
+                </ul>
+            </nav>
+        
     </header>
 
 
@@ -79,26 +80,26 @@
             </div>
         </section>
 
-        <section class="extra"> 
-            <div class="Curiosities"> <!--cards/tarjes with curiosities-->
+        <section class="extra">  
+            <div class="Curiosities"> <!--cards/tarjetas with curiosities-->
                 <h2>Curiosities</h2>
                 <picture>
-                    <img src="images/crate-svgrepo-com.svg" alt="" width="50" loading="lazy">
+                    <img src="images/crate-svgrepo-com.svg" alt="Curiosity Icon" width="50" loading="lazy">
                 </picture>
                 <p id="curiosity-text">Some Curiosities about the Tara!</p>
             </div>
-
-            <div class="container"><!--app of weather-->
+        
+            <div class="container"><!--Weather app-->
                 <h3>Current Weather</h3>
                 <figure>
                     <img src="images/weather.svg" alt="Weather Icon" width="50" loading="lazy">
                 </figure>
                 <form id="weatherform">
-                <label for="cityInput" class="visually-hidden">City</label>
-                <input type="text" id="cityInput" placeholder="Enter a city name" aria-label="City">
-                <button type="submit">Get Weather</button>
+                    <label for="cityInput" class="visually-hidden">City</label>
+                    <input type="text" id="cityInput" placeholder="Enter a city name" aria-label="City">
+                    <button type="submit">Get Weather</button>
                 </form>
-                <div id="weatherResults">
+                <div id="weatherResults"></div>
             </div>
         </section>
 

@@ -86,10 +86,11 @@ function displayWeatherResults(data) {
 //curiosities text-changing
 
 let curiosities = [];
+let curiosityIndex = 0;  // Define the curiosityIndex variable
 
 async function fetchCuriosities() {
     try {
-        const response = await fetch('./data/curiosities.json');
+        const response = await fetch('/data/curiosities.json');
         if (!response.ok) throw new Error('Failed to fetch curiosities');
         const data = await response.json();
         curiosities = data.Curiosities; // Store the fetched curiosities
@@ -102,13 +103,12 @@ async function fetchCuriosities() {
 function changeCuriosity() {
     if (curiosities.length > 0) {
         document.getElementById("curiosity-text").textContent = curiosities[curiosityIndex];
-        curiosityIndex = (curiosityIndex + 1) % curiosities.length;
+        curiosityIndex = (curiosityIndex + 1) % curiosities.length; // Loop back to the first curiosity
     }
 }
 
 fetchCuriosities();
 setInterval(changeCuriosity, 10000);
-
 
 
 

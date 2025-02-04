@@ -1,8 +1,539 @@
 /*
 index
-directory
-join
-membership
-
-
 */
+:root {
+    --color1: #f0ede8;
+    --color2: white;
+    --color3: black;
+    --color4: #ea943e;/*#f28c28;*/
+    --color5: #8c2f0b;
+    --color6: #f4f599;
+    --color7: #d9c2a3;
+    --color8: #3b5998;
+    --color9: #6dbf7d;
+    --color10: #101e01;
+}
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color1);
+    color: var(--color3);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color4);
+    color: var(--color10);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--color10);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Change background color for individual links on hover */
+#navLinks a:hover {
+    background-color: var(--color9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Hide the nav menu by default for smaller screens */
+#navLinks {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--color4);
+    padding: 1rem;
+}
+
+/* Display the nav menu when the active class is applied */
+#navLinks.active {
+    display: flex;
+}
+
+/*Welcome general desings*/
+.welcome {
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 30px;
+    padding: 40px;
+    background: url(../images/pexels-planka-27549886.webp) no-repeat center center/cover;
+}
+
+
+.welcome h3, .welcome p {
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: white; /* Ensure text is readable */
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+.welcome a {
+    color: #f28c28;
+}
+
+
+/*Extra general desings*/
+.extra {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    margin: auto;
+    justify-content: space-around;
+}
+
+
+
+
+/*curiosities data*/
+.Curiosities {
+    background-color: var(--color2);
+    border: 2px solid var(--color7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Curiosities h2 {
+    color: var(--color5);
+    margin-bottom: 10px;
+}
+
+.Curiosities p {
+    color: var(--color3);
+    font-size: 1rem;
+}
+
+.Curiosities img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Events sections*/
+/* General News Section Styling */
+.Events {
+    padding: 2rem;
+    background-color: var(--color6); /* Light gray background */
+
+
+}
+
+.Events h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* News Cards Grid Layout */
+
+#newsSection , .news-grid{
+    border: none;
+}
+
+/* News Cards Grid Layout */
+#newsCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px; /* Control the max width */
+}
+
+/* Individual News Card Styling */
+.news-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effects */
+.news-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;  /* Adjust to a fixed height or use auto depending on your design */
+    object-fit: cover;
+}
+
+/* Heading and paragraph in the news card */
+.news-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem;
+    color: #333;
+}
+
+
+.news-card p {
+    margin: 1rem;
+    font-size: 0.9rem;
+    color: var(--blue);
+}
+
+/* Link/Button inside the news card */
+.news-card a {
+    display: block;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+
+.news-card a:hover {
+    background-color: var(--blue-7);
+}
+
+
+/*news div*/
+.newsCards {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* container div */
+
+.container {
+    background-color: var(--color2);
+    border: 2px solid var(--color7);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container h3 {
+    color: var(--color5);
+    margin-bottom: 10px;
+}
+
+.container form {
+    margin-bottom: 15px;
+}
+
+.container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color7);
+}
+
+.container button {
+    padding: 10px 20px;
+    background-color: var(--color5);
+    color: var(--color2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: var(--color9);
+    color: var(--color3);
+}
+
+#weatherResults {
+    margin-top: 1.25rem;
+    text-align: left;
+}
+
+#weatherResults h2 {
+    text-align: center;
+}
+
+.results {
+    width: 60%;
+    margin: 1rem auto;
+}
+
+.weatherResult {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-wrap: nowrap;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* associate Cards Section General */
+.associates {
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 30px;
+    padding: 40px;
+}
+
+.associates h3 {
+    font-size: 2rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+    max-width: 1200px; /* Control the max width */
+}
+
+.card {
+    background: var(--color2);
+    border: 2px solid var(--color7);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card img {
+    width: 100%;
+    height: 200px;  /* Adjust to a fixed height or use auto depending on your design */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: var(--color5);
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: var(--color3);
+}
+
+.card a {
+    background-color: var(--color9);
+    color: navy;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+/* Footer */
+/* General Footer Styling */
+footer {
+    background-color: var(--color4);
+    color: var(--color10);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footer-contact, .footer-social {
+    flex: 1;
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--color10);
+}
+
+.footer-contact p, .footer-contact a {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: var(--color10);
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.footer-social img {
+    width: 52px;
+    height: 52px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* For larger screens, ensure the menu is always visible */
+@media (min-width: 768px) {
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main > section:first-of-type {
+        padding: 2rem 1rem;
+    }
+
+    #cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 480px) { 
+    header, footer { font-size: 0.8rem; }
+
+    .extra { 
+        flex-direction: column;
+        gap: 10px;
+        padding: auto;
+    }
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+    .news-card img {
+        height: 150px; /* Adjust image size for smaller screens */
+    }
+
+    .news-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .news-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-card img {
+        height: 120px; /* Adjust further for very small screens */
+    }
+
+    .news-card h3 {
+        font-size: 1rem;
+    }
+
+    .news-card p {
+        font-size: 0.8rem;
+    }
+
+    header, footer { 
+        font-size: 0.8rem; 
+    }
+}

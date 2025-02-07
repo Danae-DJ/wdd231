@@ -1,12 +1,121 @@
 :root {
-    --color1: #f0ede8;
+    --color1: #f0ede8; /* Light beige */
     --color2: white;
     --color3: black;
-    --color4: #ea943e;
-    --color5: #8c2f0b;
-    --color6: #f4f599;
-    --color7: #d9c2a3;
-    --color8: #3b5998;
-    --color9: #6dbf7d;
-    --color10: #101e01;
+    --color4: #ea943e; /* Warm orange */
+    --color5: #8c2f0b; /* Dark brown */
+    --color6: #f4f599; /* Light yellow */
+    --color7: #d9c2a3; /* Soft beige */
+    --color8: #3b5998; /* Deep blue */
+    --color9: #6dbf7d; /* Soft green */
+    --color10: #101e01; /* Very dark green */
+}
+
+/* General Design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color2);
+    color: var(--color5); /* Dark brown for softer contrast */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color4); /* Warm orange */
+    color: var(--color10); /* Light beige for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color10);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--color4); /* Warm orange */
+    color: var(--color10); /* Light text */
+    padding: 10px;
+}
+
+nav a {
+    margin-right: 15px;
+    color: var(--color10); /* Light beige */
+}
+
+nav a:hover {
+    color: var(--color6); /* Light yellow for a nice effect */
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color5); /* Dark brown for contrast */
+}
+
+a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color6); /* Light yellow */
+}
+
+p{
+    color: var(--color3);
+}
+
+section {
+    padding: 20px;
+    background-color: var(--color6); /* Soft beige */
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Softer shadow */
+}
+
+button {
+    background-color: var(--color5); /* Dark brown */
+    color: var(--color1); /* Light text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color4); /* Warm orange */
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--color4);
+    color: var(--color10); /* Light text for better contrast */
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
 }

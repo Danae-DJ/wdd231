@@ -115,54 +115,20 @@ div {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.discover-grid .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    animation: jump 0.8s ease-in-out forwards;
-    opacity: 0;
+/* section Visitor message*/
+.visitor-message{
+    background-color: var(--blue-1);
+    border: 3px solid var(--blue-7);
 }
 
-/* Stagger effect: Apply different delays */
-.discover-grid .card:nth-child(1) img { animation-delay: 0.2s; }
-.discover-grid .card:nth-child(2) img { animation-delay: 0.4s; }
-.discover-grid .card:nth-child(3) img { animation-delay: 0.6s; }
-.discover-grid .card:nth-child(4) img { animation-delay: 0.8s; }
-.discover-grid .card:nth-child(5) img { animation-delay: 1s; }
-.discover-grid .card:nth-child(6) img { animation-delay: 1.2s; }
-.discover-grid .card:nth-child(7) img { animation-delay: 1.4s; }
-.discover-grid .card:nth-child(8) img { animation-delay: 1.6s; }
-.discover-grid .card:nth-child(9) img { animation-delay: 1.8s; }
 
 
-/*animation jump one by one*/
 
-@keyframes jump {
-    0% { transform: translateY(10px); opacity: 0; }
-    50% { transform: translateY(-5px); opacity: 0.7; }
-    100% { transform: translateY(0); opacity: 1; }
-}
+
+
+
+
+
 
 
 
@@ -194,7 +160,37 @@ div {
     border-radius: 5px;
 }
 
-/* Hover Effect for Desktop Only */
+.discover-grid .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    animation: jump 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+
+/*desing examples images: https://codepen.io/blazzard-jason/pen/jBaoLr/*/
+
+/* Stagger effect: Apply different delays */
+.discover-grid .card:nth-child(1) img { animation-delay: 0.2s; }
+.discover-grid .card:nth-child(2) img { animation-delay: 0.4s; }
+.discover-grid .card:nth-child(3) img { animation-delay: 0.6s; }
+.discover-grid .card:nth-child(4) img { animation-delay: 0.8s; }
+.discover-grid .card:nth-child(5) img { animation-delay: 1s; }
+.discover-grid .card:nth-child(6) img { animation-delay: 1.2s; }
+.discover-grid .card:nth-child(7) img { animation-delay: 1.4s; }
+.discover-grid .card:nth-child(8) img { animation-delay: 1.6s; }
+.discover-grid .card:nth-child(9) img { animation-delay: 1.8s; }
+
+
+/*animation jump one by one*/
+
+@keyframes jump {
+    0% { transform: translateY(10px); opacity: 0; }
+    50% { transform: translateY(-5px); opacity: 0.7; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Hover Effect for Desktop Only GRID*/
 @media (min-width: 1025px) {
     .card figure img:hover {
         transform: scale(1.05);

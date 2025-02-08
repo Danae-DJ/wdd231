@@ -37,3 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.setItem("lastVisit", currentVisit);
 });
+
+
+//by message of viste:
+// COPEN.IO example: https://codepen.io/blazzard-jason/pen/WNZvOEK
+//

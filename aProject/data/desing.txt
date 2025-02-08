@@ -147,3 +147,179 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Desing images of cards...
+
+
+Discover Grid Media Queries with this improved version:
+
+css
+Copiar código
+/* Base styles for the grid container */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: auto;
+}
+
+/* Small Screens (320px to 640px) */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+            "name"
+            "photograph"
+            "description"
+            "location";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screens (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-areas:
+            "photograph name"
+            "photograph description"
+            "photograph location";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-areas:
+            "name name"
+            "photograph description"
+            "location location";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Assign grid areas to each card */
+.card {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "description"
+        "location";
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--color2);
+    border: 1px solid var(--color3);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Assign grid areas */
+.card h2 {
+    grid-area: name;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color5);
+}
+
+.card figure {
+    grid-area: photograph;
+    display: flex;
+    justify-content: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    grid-area: description;
+    text-align: justify;
+    color: var(--color3);
+}
+
+.card address {
+    grid-area: location;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color5);
+}
+🔹 What Was Fixed?
+✅ Removed Duplicate @media Queries – Now, only one set of media queries controls .discover-grid.
+✅ Ensured grid-template-areas Apply Properly – The .card divs will maintain the expected layout.
+✅ Merged Layout and Structure – This prevents one @media query from overriding the other.
+
+Your grid layout should now correctly display the different named grid areas on small, medium, and large screens. Let me know if you need further adjustments! 🚀🎨
+
+
+
+
+
+
+Dijiste:
+thanks... it's possible to add this: .card figure:hover {
+    box-shadow: 0 0 50px #333;
+}?
+ChatGPT dijo:
+Yes! You can absolutely add this hover effect. However, since .card figure is a flex container, the shadow won't be visible unless the figure has a background or border.
+
+✅ Updated Code with Hover Effect
+css
+Copiar código
+.card figure {
+    grid-area: photograph;
+    display: flex;
+    justify-content: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card figure:hover {
+    box-shadow: 0 0 50px #333;
+    border-radius: 10px; /* Optional: To make the shadow blend better */
+}
+🛠 Tips for a Better Effect
+If the shadow isn't visible, try adding background-color: white; or border: 1px solid #ddd; to .card figure.
+If you want the image itself to have the glow, apply the box-shadow to .card img:hover instead.
+Example for Image Glow Instead:
+css
+Copiar código
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card img:hover {
+    box-shadow: 0 0 50px #333;
+}
+Let me know which effect you prefer! 😊🔥

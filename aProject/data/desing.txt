@@ -1,0 +1,149 @@
+discover html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Tara's Society</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+</head>
+<body>
+    <header>
+        <h1>Tara's Society</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="visitor-message">
+            <p id="visitMessage"></p>
+        </section>
+
+        <section class="discover-grid">
+            <article class="card">
+                <h2>Central Park</h2>
+                <figure>
+                    <img src="images/central-park.webp" alt="Central Park">
+                </figure>
+                <address>123 Main St, City, State</address>
+                <p>A beautiful park with walking trails, picnic areas, and a playground.</p>
+                <button>Learn More</button>
+            </article>
+
+            <article class="card">
+                <h2>Historic Museum</h2>
+                <figure>
+                    <img src="images/museum.webp" alt="Historic Museum">
+                </figure>
+                <address>456 Heritage Rd, City, State</address>
+                <p>Explore the rich history of our city with interactive exhibits and guided tours.</p>
+                <button>Learn More</button>
+            </article>
+
+            <!-- Add 6 more places -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tara's Society</p>
+    </footer>
+
+    <script src="scripts/visit-tracker.js"></script>
+</body>
+</html>
+
+css
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color1);
+    color: var(--color3);
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid Layout */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: var(--color2);
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.card figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Hover Effect for Desktop Only */
+@media (min-width: 1025px) {
+    .card figure img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+
+css optional medium..
+/* Small Screen Layout */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screen Layout */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large Screen Layout */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+js...
+
+document.addEventListener("DOMContentLoaded", () => {
+    const visitMessage = document.getElementById("visitMessage");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const currentVisit = Date.now();
+
+    if (!lastVisit) {
+        visitMessage.textContent = "Welcome! Let us know if you have any questions.";
+    } else {
+        const daysPassed = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+
+        if (daysPassed < 1) {
+            visitMessage.textContent = "Back so soon! Awesome!";
+        } else if (daysPassed === 1) {
+            visitMessage.textContent = `You last visited 1 day ago.`;
+        } else {
+            visitMessage.textContent = `You last visited ${daysPassed} days ago.`;
+        }
+    }
+
+    localStorage.setItem("lastVisit", currentVisit);
+});
+
+

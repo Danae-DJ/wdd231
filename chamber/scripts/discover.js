@@ -1,3 +1,4 @@
+//discover.js
 // Set current year in footer
 const yearSpan = document.getElementById('currentYear');
 yearSpan.textContent = new Date().getFullYear();
@@ -41,4 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //by message of viste:
 // COPEN.IO example: https://codepen.io/blazzard-jason/pen/WNZvOEK
-//
+//locations cards
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("data/locations.json")  // Adjust the path if needed
+        .then(response => response.json())
+        .then(data => displayLocations(data))
+        .catch(error => console.error("Error loading JSON:", error));
+});
+
+function displayLocations(locations) {
+    const container = document.querySelector(".discover-grid");
+
+    locations.forEach(location => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <h2>${location.title}</h2>
+            <figure>
+                <img src="${location.image}" alt="${location.alt}" width="300" height="200" loading="lazy">
+            </figure>
+            <address>${location.address}</address>
+            <p>${location.description}</p>
+            <button>${location.buttonText}</button>
+        `;
+
+        container.appendChild(card);
+    });
+}

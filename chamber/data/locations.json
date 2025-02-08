@@ -1,0 +1,66 @@
+[
+    {
+      "title": "Lava Hot Springs",
+      "image": "images/Lava-Hot-Springs.webp",
+      "alt": "Lava Hot Springs",
+      "address": "430 East Main Street, Lava Hot Springs, ID 83246",
+      "description": "Lava Hot Spring are natural hot springs with facilities operated by the state. The swimming pools provide safety and hygiene measures; They are also enjoyable due to the convenient variety between the pools, such as shallow and shallow places, monitored temperature to enjoy the water at different temperatures; maximizing relaxation.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Idaho Botanical Garden",
+      "image": "images/botanica-idaho.webp",
+      "alt": "Idaho Botanical Garden",
+      "address": "2355 Old Penitentiary Rd, Boise, ID 83712",
+      "description": "The Idaho Botanical Garden is located next to the former prison in Boise, Idaho. This attraction is a beautiful landscape focused on delighting through an exorbitant number of species from the plant kingdom. The tour through the botany allows you to feel like you are on an environmental adventure. There are places to sit and relax freely. There is also a Koi fish pond.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Payette Lake",
+      "image": "images/Payette-lake.webp",
+      "alt": "Payette Lake",
+      "address": "Payette Lake, a 5330 acre lake in the mountains of McCall, Idaho.",
+      "description": "Payette Lake is located in McCall, Idaho. It is a beautiful lake with Ponderosa State Park running through the middle, with great hiking and beautiful scenery, ideal for clear days. There are several restaurants on the lake with excellent views and a beautiful beach which you will undoubtedly want to enjoy. McCall offers many enjoyable day hikes to local lakes and waterfalls, as well as other enjoyable outdoor activities.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "City Of Rocks National Reserve",
+      "image": "images/city-of-rocks.webp",
+      "alt": "City Of Rocks National Reserve",
+      "address": "3035 Elba Almo Rd, Almo, ID 83312-9700",
+      "description": "City Of Rocks National Reserve  is located just outside the National Reserve in the community of Almo. There are services are available in the area, such as fuel, groceries, camping supplies, restaurants, lodging, post office, and hot springs. Don't worries we have fantastics atention for you.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Morrison-Knudsen Nature Center",
+      "image": "images/Morrison-Knudsen-Nature-Center.webp",
+      "alt": "Morrison-Knudsen Nature Center",
+      "address": "600 S Walnut St, Boise, ID 83712-7729",
+      "description": "As the name says, we are talking about a nature center where you can walk and enjoy the large pond with small creatures such as: fish, butterflies, bees and wasps enjoying the flowers in the garden while you learn the history of the various species of insects or fish. Parking and the center are free.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Schweitzer",
+      "image": "images/Schweitzer.webp",
+      "alt": "Schweitzer",
+      "address": "10000 Schweitzer Mountain Rd, Sandpoint, ID 83864-9235",
+      "description": "For outdoor winter activities this is the right place; Schweitzer is a beautiful place, a good place to ski, you will find good snow, good slopes and incredible views. They have a beautiful lake, good restaurants; In addition, the town offers you an important cultural history.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Yellowstone Bear World",
+      "image": "images/YellowstoneBearWorld.webp",
+      "alt": "Yellowstone Bear World",
+      "address": "6010 S 4300 W, Rexburg, ID 83440-4405",
+      "description": "Considering that one goes to Yellowstone wanting to see bears, this local refuge is the best option to see them up close. It is an attraction for children and adults where you can touch animals and learn. There are also mountain goats, deer, among other beautiful animals that walk freely and that you could feed. The place is excellent a great attraction of Idaho Falls.",
+      "buttonText": "Learn More"
+    },
+    {
+      "title": "Lake Pend Oreille",
+      "image": "images/LakePendOreille.webp",
+      "alt": "Lake Pend Oreille",
+      "address": "365 North Triangle Drive Ponderay, Idaho 83852",
+      "description": "Lake Pend Oreille is a truly beautiful lake. Ideal for boating, swimming, fishing and kayaking. With facilities that allow the adventurer to engage in activities. The area is surrounded by mountains and forests and water is easily accessible. The beach near Sam Owens State Park has a sand volleyball court and kayak rentals, plus kiosks with basic amenities, all so you can stay worry-free all day.",
+      "buttonText": "Learn More"
+    }
+  ]

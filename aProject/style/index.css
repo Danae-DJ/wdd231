@@ -1,4 +1,5 @@
-/*
+/* stop
+stop now
 index
 */
 :root {
@@ -36,6 +37,29 @@ header {
     color: var(--color10);
     padding: 20px;
     text-align: center;
+}
+
+header h1 {
+
+    text-shadow: 2px 2px 4px var(--color6);
+}
+
+header img {
+    
+    animation: mySpinner 4s;
+    animation-iteration-count: 8;
+}
+
+@keyframes mySpinner {
+    from {
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 nav {
@@ -90,6 +114,11 @@ nav ul li a {
     background: url(../images/pexels-planka-27549886.webp) no-repeat center center/cover;
 }
 
+.welcome h2 {
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px var(--color1);
+}
 
 .welcome h3, .welcome p {
     background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
@@ -378,6 +407,7 @@ nav ul li a {
     border-radius: 10px;
 }
 
+
 .card h3 {
     color: var(--color5);
     font-size: 1.2rem;
@@ -397,7 +427,9 @@ nav ul li a {
     border-radius: 5px;
 }
 
-
+.card a:hover {
+    box-shadow: 0 0 10px #333;
+}
 
 
 /* Footer */

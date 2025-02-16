@@ -1,0 +1,85 @@
+<!--directory.html:-->
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society's Tara</title>
+    <meta property="og:title" content="WDD231 | Tara's Society ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://danae-dj.github.io/wdd231/aProject/images/"> 
+    <meta property="og:url" content="https://danae-dj.github.io/wdd231/aProject/index.html">
+    <meta name="description" content="The Tara Society Promoting the business interests of its members">
+    <meta name="author" content="Dánae De la Cruz Jiménez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/directory.css">
+    <script src="scripts/directory.js" defer></script>
+    <link rel="icon" href="">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Tara's Society</h1>
+            <h4>"We fill the crate with the best for you"</h4>
+            <figure>
+                <img src="images/crate-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
+            </figure>
+        </div>
+        <nav>
+            <button id="menuToggle">☰</button>
+            <ul id="navLinks">
+                <li><a href="index.html" class="current" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li><a href="directory.html" target="_blank" rel="noopener noreferrer">Directory</a></li>
+                <li><a href="membership.html" target="_blank" rel="noopener noreferrer">Membership</a></li>
+                <li><a href="join.html" target="_blank" rel="noopener noreferrer">Join</a></li>
+                <li><a href="discover.html" target="_blank" rel="noopener noreferrer">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the Chamber</h2>
+            <button id="Tickets">Events Tickets</button>
+        </section>
+
+        <section class="content">
+            <h2>Business Directory</h2>
+            <button id="viewToggle" aria-label="Toggle between grid and list view">Switch to List View</button>
+            <div id="cards" class="grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><strong>Tara's Society</strong></p>
+                <p>"We fill the crate with the best for you"</p>
+                <figure>
+                    <img src="images/crate-svgrepo-com.svg" alt="Rexburg Chamber Logo" width="50" loading="lazy">
+                </figure>
+                <p><strong>Address:</strong> 157 Tepotzotlán, Edo. Mexico, Mexico</p>
+                <p><strong>Phone:</strong> +01 123 456 7890</p>
+                <p><strong>Email:</strong> <a href="mailto:danae@example.com">SoCrate@example.com</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/521234567890">+52 823 416 0890</a></p>
+                <p><strong>Hours:</strong> Mon-Fri: 9am-5pm</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com" target="_blank"><img src="images/492997_facebook_social_icon.svg" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/492996_social_twitter_icon.svg" alt="Twitter"></a>
+                <a href="https://instagram.com" target="_blank"><img src="images/1242852_instagram_social_social_media_icon.svg" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <p>&copy; <span id="currentYear"></span> Dánae De la Cruz Jiménez | Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>

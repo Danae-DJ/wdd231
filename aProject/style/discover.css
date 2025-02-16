@@ -100,6 +100,168 @@ nav ul li a {
     display: flex;
 }
 
+
+
+
+
+
+
+
+
+
+/* Card Container */
+.card {
+    display: grid;
+    grid-template-areas:
+        "image title"
+        "image description"
+        "image location";
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--color2);
+    border: 1px solid var(--color3);
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 30px;
+}
+
+/* Title Styling */
+.card .place-title {
+    grid-area: title;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color5);
+    font-weight: bold;
+}
+
+/* Image Styling */
+.card .place-image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.card .place-image:hover {
+    transform: scale(1.05);
+}
+
+/* Description Styling */
+.card .place-description {
+    grid-area: description;
+    text-align: justify;
+    color: var(--color3);
+    font-size: 1rem;
+}
+
+/* Location Styling */
+.card .place-address {
+    grid-area: location;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color5);
+}
+
+/* Small Screens (320px to 640px) */
+@media (max-width: 640px) {
+    .card {
+        grid-template-areas:
+            "image"
+            "title"
+            "description"
+            "location";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screens (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .card {
+        grid-template-areas:
+            "image title"
+            "image description"
+            "image location";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+    .card {
+        grid-template-areas:
+            "image title"
+            "image description"
+            "image location";
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* Animation for cards */
+.card img {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.card .learn-more {
+    background-color: var(--color4);
+    color: var(--color2);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card .learn-more:hover {
+    background-color: var(--color5);
+}
+
+
+
+/*stops now*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
     background-color: var(--color4);
@@ -232,116 +394,3 @@ footer {
 }
 
 
-
-/* Section Visitor message */
-.visitor-message {
-    background-color: var(--blue-1);
-    border: 3px solid var(--blue-7);
-}
-
-/* Discover-grid */
-.discover-grid {
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: auto;
-}
-
-/* Small Screens (320px to 640px) */
-@media (max-width: 640px) {
-    .discover-grid {
-        grid-template-areas:
-            "name"
-            "photograph"
-            "description"
-            "location";
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Medium Screens (641px to 1024px) */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .discover-grid {
-        grid-template-areas:
-            "photograph name"
-            "photograph description"
-            "photograph location";
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-/* Large Screens (1025px and above) */
-@media (min-width: 1025px) {
-    .discover-grid {
-        grid-template-areas:
-            "name name"
-            "photograph description"
-            "location location";
-        grid-template-columns: 1fr 2fr;
-    }
-}
-
-/* Assign grid areas to each card */
-.card {
-    display: grid;
-    grid-template-areas:
-        "name"
-        "photograph"
-        "description"
-        "location";
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: var(--color2);
-    border: 1px solid var(--color3);
-    border-radius: 10px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Assign grid areas */
-.card h2 {
-    grid-area: name;
-    text-align: center;
-    font-size: 1.5rem;
-    color: var(--color5);
-}
-
-.card figure {
-    grid-area: photograph;
-    display: flex;
-    justify-content: center;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.card img:hover {
-    box-shadow: 0 0 50px #333;
-}
-
-.card p {
-    grid-area: description;
-    text-align: justify;
-    color: var(--color3);
-}
-
-.card address {
-    grid-area: location;
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-    color: var(--color5);
-}
-
-/* Animation */
-.discover-grid .card:nth-child(1) img { animation-delay: 0.2s; }
-.discover-grid .card:nth-child(2) img { animation-delay: 0.4s; }
-.discover-grid .card:nth-child(3) img { animation-delay: 0.6s; }
-.discover-grid .card:nth-child(4) img { animation-delay: 0.8s; }
-.discover-grid .card:nth-child(5) img { animation-delay: 1s; }
-.discover-grid .card:nth-child(6) img { animation-delay: 1.2s; }
-.discover-grid .card:nth-child(7) img { animation-delay: 1.4s; }
-.discover-grid .card:nth-child(8) img { animation-delay: 1.6s; }
-.discover-grid .card:nth-child(9) img { animation-delay: 1.8s; }

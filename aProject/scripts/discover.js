@@ -1,3 +1,4 @@
+
 //discover.js
 // Set current year in footer
 const yearSpan = document.getElementById('currentYear');
@@ -15,8 +16,7 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active'); // Toggle the 'active' class on the nav menu
 });
 
-
-//Visit message introduction
+// Visit message introduction
 document.addEventListener("DOMContentLoaded", () => {
     const visitMessage = document.getElementById("visitMessage");
     const lastVisit = localStorage.getItem("lastVisit");
@@ -39,32 +39,32 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("lastVisit", currentVisit);
 });
 
+// Fetch the locations data from the JSON file
+fetch('data/locations.json')
+  .then(response => response.json())  // Parse the JSON response
+  .then(data => {
+    const places = data.places;  // Extract the array of places
 
+    // Get the container element where you want to display the locations
+    const locationsContainer = document.getElementById('locations-container');
 
-document.addEventListener("DOMContentLoaded", () => {
-    fetch("../data/locations.json") 
-        .then(response => response.json())
-        .then(data => displayLocations(data))
-        .catch(error => console.error("Error loading JSON:", error));
-});
-
-function displayLocations(locations) {
-    const container = document.querySelector(".discover-grid");
-
-    locations.forEach(location => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-
-        card.innerHTML = `
-            <h2>${location.title}</h2>
-            <figure>
-                <img src="${location.image}" alt="${location.alt}" width="300" height="200" loading="lazy">
-            </figure>
-            <address>${location.address}</address>
-            <p>${location.description}</p>
-            <button>${location.buttonText}</button>
-        `;
-
-        container.appendChild(card);
-    });
-}
+    // Loop through the places and create HTML elements for each place
+    places.forEach(place => {
+      const placeElement = document.createElement('div');
+      placeElement.classList.add('card');  // Use 'card' class for styling
+  
+      // Add the content with matching classes
+      placeElement.innerHTML = `
+          <img src="${place.image}" alt="${place.alt}" class="place-image" width="150" loading="lazy">
+          <h3 class="place-title">${place.title}</h3>
+          <p class="place-description">${place.description}</p>
+          <p class="place-address">${place.address}</p>
+          <button class="learn-more">${place.buttonText}</button>
+      `;
+  
+      // Append the new place element to the container
+      locationsContainer.appendChild(placeElement);
+  });
+  
+  })
+  .catch(error => console.error('Error fetching the locations data:', error));

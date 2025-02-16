@@ -98,6 +98,22 @@ nav ul li a {
     display: flex;
 }
 
+
+.hero {
+    border-radius: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 30px;
+    padding: 40px;
+    background: url(../images/pexels-planka-27549886.webp) no-repeat center center/cover;
+}
+
+.hero h2{
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px var(--color1);
+}
+
+
 /* associate Cards Section General */
 .content {
     border-radius: .5rem;

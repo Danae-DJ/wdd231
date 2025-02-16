@@ -29,7 +29,8 @@ if (viewToggle) {
     viewToggle.addEventListener('click', toggleView);
 }
 
-const membersDocument_url = './data/members.json';
+const membersDocumentUrl = './data/members.json';
+
 
 async function fetchMembers() {
     const cardsContainer = document.getElementById('cards');
@@ -43,20 +44,20 @@ async function fetchMembers() {
     }
 }
 
-function renderCards(members) {
+function displayMembers(members) {
     const cardsContainer = document.getElementById('cards');
-    cardsContainer.innerHTML = '';
+    cardsContainer.innerHTML = ''; 
+    
     members.forEach(member => {
         const card = document.createElement('div');
-        card.classList.add('card');
+        card.className = 'card';
         card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}">
-            <h3>${member.name}</h3>
-            <p>${member.description}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
+            <img src="${member.Image || 'images/default-image.jpg'}" alt="${member.businesName || 'Business'}" loading="lazy">
+            <h3>${member.businesName || 'Business Name Not Available'}</h3>
+            <p>Tagline: ${member.businessTagline || 'No tagline available'}</p>
+            <p>Phone: ${member.phone || 'No phone number'}</p>
+            <a href="${member.URL || '#'}" target="_blank">${member.URL ? 'Visit Website' : 'No Website'}</a>
         `;
         cardsContainer.appendChild(card);
     });
 }
-
-fetchMembers();

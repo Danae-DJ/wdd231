@@ -323,3 +323,40 @@ Copiar código
     box-shadow: 0 0 50px #333;
 }
 Let me know which effect you prefer! 😊🔥
+
+
+
+
+
+aProject{
+        data{
+            curiosities.json
+            locations.json
+            members.json
+            newsEvents.json
+        }
+
+        images{}
+
+        scripts{
+            directory.js
+            discover.js
+            indext.js
+            join.js
+            thanks.js
+        }
+
+        style{
+            directory.css
+            discover.css
+            indext.css
+            join.css
+        }
+
+        directory.html
+        discover.html
+        indext.html
+        join.html
+        thanks.html
+
+}

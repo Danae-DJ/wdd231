@@ -1,16 +1,19 @@
 
 /*discover.css:*/
 :root {
-    --color1: navy;
+    --color1: #f0ede8;
     --color2: white;
     --color3: black;
-    --color4: grey;
-    --color5: darkred;
-    --blue: rgb(29, 77, 114);
-    --blue-1: rgba(29, 77, 114, 0.1);
-    --blue-7: rgba(29, 77, 114, 0.7);
+    --color4: #ea943e; /*#f28c28;*/
+    --color5: #8c2f0b;
+    --color6: #f4f599;
+    --color7: #d9c2a3;
+    --color8: #3b5998;
+    --color9: #6dbf7d;
+    --color10: #101e01;
+    --blue-1: #6dbf7d; /* Define color for blue-1 */
+    --blue-7: #3b5998; /* Define color for blue-7 */
 }
-
 
 /* General Reset */
 * {
@@ -21,76 +24,67 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    background-color: var(--color1);
     color: var(--color3);
-    background-color: #f4f4f9;
     margin: 0;
+    padding: 0;
 }
 
-/* Header */
 header {
-    background-color: var(--blue);
-    color: var(--color2);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    background-color: var(--color4);
+    color: var(--color10);
+    padding: 20px;
+    text-align: center;
 }
 
-header h2 {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 1.8rem;
+header h1 {
+    text-shadow: 2px 2px 4px var(--color6);
 }
 
-header h4 {
-    font-weight: normal;
-    margin-top: 0.5rem;
+header img {
+    animation: mySpinner 4s;
+    animation-iteration-count: 8;
 }
 
-header figure img {
-    width: 50px;
-    height: auto;
+@keyframes mySpinner {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-
-.title {
-    max-width: 350px;
-    display: flex;
-    flex-direction: row;
-}
-
 
 nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 1rem;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: var(--color10);
     text-decoration: none;
-    color: var(--color2);
     font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: var(--blue-7);
 }
 
 /* Change background color for individual links on hover */
 #navLinks a:hover {
-    background-color: var(--color4);
+    background-color: var(--color9);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Hide the nav menu by default for smaller screens */
@@ -98,7 +92,7 @@ nav ul li a.active {
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--blue);
+    background-color: var(--color4);
     padding: 1rem;
 }
 
@@ -107,32 +101,152 @@ nav ul li a.active {
     display: flex;
 }
 
-/*General desing to sections and divs*/
-section, 
-div {
+/* Footer */
+footer {
+    background-color: var(--color4);
+    color: var(--color10);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footer-contact, .footer-social {
+    flex: 1;
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+.footer-contact h4, .footer-social h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--color10);
+}
+
+.footer-contact p, .footer-contact a {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: var(--color10);
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.footer-social img {
+    width: 52px;
+    height: 52px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+/* For larger screens, ensure the menu is always visible */
+@media (min-width: 768px) {
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    main > section:first-of-type {
+        padding: 2rem 1rem;
+    }
+
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) { 
+    header, footer { font-size: 0.8rem; }
+
+    .extra { 
+        flex-direction: column;
+        gap: 10px;
+        padding: auto;
+    }
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+    .news-card img {
+        height: 150px;
+    }
+
+    .news-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .news-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-card img {
+        height: 120px;
+    }
+
+    .news-card h3 {
+        font-size: 1rem;
+    }
+
+    .news-card p {
+        font-size: 0.8rem;
+    }
+
+    header, footer { 
+        font-size: 0.8rem; 
+    }
+}
+
+/* General design for sections and divs */
+section, div {
     border-radius: .5rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin: 10px;
     padding: 20px;
 }
 
-
-/* section Visitor message*/
-.visitor-message{
+/* Section Visitor message */
+.visitor-message {
     background-color: var(--blue-1);
     border: 3px solid var(--blue-7);
 }
 
-
-
-
-
-
-
-
-
-/*Discover-grid*/
-/* Base styles for the grid container */
+/* Discover-grid */
 .discover-grid {
     display: grid;
     gap: 1rem;
@@ -214,7 +328,6 @@ div {
     box-shadow: 0 0 50px #333;
 }
 
-
 .card p {
     grid-area: description;
     text-align: justify;
@@ -229,10 +342,7 @@ div {
     color: var(--color5);
 }
 
-
-/*desing examples images: https://codepen.io/blazzard-jason/pen/jBaoLr/*/
-/*Animation*/
-/* Stagger effect: Apply different delays */
+/* Animation */
 .discover-grid .card:nth-child(1) img { animation-delay: 0.2s; }
 .discover-grid .card:nth-child(2) img { animation-delay: 0.4s; }
 .discover-grid .card:nth-child(3) img { animation-delay: 0.6s; }
@@ -242,154 +352,3 @@ div {
 .discover-grid .card:nth-child(7) img { animation-delay: 1.4s; }
 .discover-grid .card:nth-child(8) img { animation-delay: 1.6s; }
 .discover-grid .card:nth-child(9) img { animation-delay: 1.8s; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Footer */
-/* General Footer Styling */
-footer {
-    background-color: var(--blue);
-    color: var(--color2);
-    padding: 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.footer-contact, .footer-social {
-    flex: 1;
-    margin: 0.5rem;
-    min-width: 200px;
-}
-
-.footer-contact h4, .footer-social h4 {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: var(--color2);
-}
-
-.footer-contact p, .footer-contact a {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
-    color: var(--color2);
-}
-
-.footer-social a {
-    display: inline-block;
-    margin: 0.5rem;
-}
-
-.footer-social img {
-    width: 52px;
-    height: 52px;
-    transition: transform 0.3s ease;
-    background-color: var(--color2);
-}
-
-.footer-social img:hover {
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* For larger screens, ensure the menu is always visible */
-@media (min-width: 768px) {
-    #navLinks {
-        display: flex;
-        flex-direction: row;
-    }
-
-}
-
-
-
-/* Media Queries */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    main > section:first-of-type {
-        padding: 2rem 1rem;
-    }
-
-}
-
-
-@media (max-width: 480px) { 
-    header, footer { font-size: 0.8rem; }
-}
-
-
-
-
-
-
-
-/*MEDIA QUARIES DISCOVER GRID*/
-/* Small Screen Layout by discover GRID */
-@media (max-width: 640px) {
-    .discover-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Medium Screen Layout */
-@media (min-width: 641px) and (max-width: 1024px) {
-    .discover-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Large Screen Layout */
-@media (min-width: 1025px) {
-    .discover-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}

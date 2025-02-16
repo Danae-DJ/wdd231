@@ -139,6 +139,10 @@ nav ul li a {
     padding: 20px;
 }
 
+#levels a {
+    color: var(--color4);
+}
+
 /* General design for membership cards */
 .membership-cards {
     display: flex;
@@ -191,13 +195,14 @@ nav ul li a {
 }
 
 .card button:hover {
+    color: var(--color5);
     background-color: var(--color9);
     transform: scale(1.05);
 }
 
 /* Modal styling */
 .modal {
-    display: none; /* Hide initially */
+    display: none; /* Hides modals initially */
     position: fixed;
     top: 0;
     left: 0;
@@ -210,13 +215,12 @@ nav ul li a {
 }
 
 .modal-content {
-    background-color: var(--color2);
-    padding: 25px;
-    border-radius: 12px;
-    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
 }
+
 
 .close {
     float: right;

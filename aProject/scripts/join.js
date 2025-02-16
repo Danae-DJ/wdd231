@@ -15,11 +15,28 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active'); // Toggle the 'active' class on the nav menu
 });
 
-//cards and modals
+// Ensure all modals are hidden on page load
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.style.display = "none"; // Hide all modals initially
+    });
+
+    // Add event listeners to all modal buttons
+    document.querySelectorAll(".card button").forEach(button => {
+        button.addEventListener("click", event => {
+            const modalId = event.target.getAttribute("onclick").match(/'([^']+)'/)[1];
+            openModal(modalId);
+        });
+    });
+});
+
+// Function to open modals
 function openModal(id) {
+    console.log(`Opening modal: ${id}`); // Debugging log
     document.getElementById(id).style.display = 'block';
 }
 
+// Function to close modals
 function closeModal(id) {
     document.getElementById(id).style.display = 'none';
 }
@@ -33,23 +50,16 @@ window.onclick = function(event) {
     });
 }
 
-// Grab the query string from the URL (everything after ?)
+// Handle form query parameters
 const params = new URLSearchParams(window.location.search);
-document.getElementById('results').innerHTML = `
-  <p>Thank you, ${params.get("first")} ${params.get("last")}!</p>
-`;
+const resultsDiv = document.getElementById('results');
 
-// Function to safely retrieve form values
-function show(key) {
-    return params.get(key) || 'Not provided'; // Default message if key is missing
+if (resultsDiv) {
+    resultsDiv.innerHTML = `
+      <p>Thank you, ${params.get("first") || "Guest"} ${params.get("last") || ""}!</p>
+      <p>Your email: ${params.get("email") || "Not provided"}</p>
+      <p>Your phone: ${params.get("phone") || "Not provided"}</p>
+      <p>Business Name: ${params.get("Business Name") || "Not provided"}</p>
+      <p>Submitted on: ${params.get("timestamp") || "Not provided"}</p>
+    `;
 }
-
-// Inject form data into the results div
-const showInfo = document.querySelector('#results');
-showInfo.innerHTML = `  
-  <p>Thank you, ${show("first")} ${show("last")}!</p>
-  <p>Your email: ${show('email')}</p>
-  <p>Your phone: ${show('phone')}</p>
-  <p>Business Name: ${show('Business Name')}</p>
-  <p>Submitted on: ${show('timestamp')}</p>
-`;

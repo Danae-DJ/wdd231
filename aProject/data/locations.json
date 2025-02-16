@@ -1,0 +1,85 @@
+{
+    "places": [
+      {
+        "title": "Museo Nacional del Virreinato",
+        "image": "images/museo-virreinato.webp",
+        "alt": "Museo Nacional del Virreinato",
+        "address": "Plaza Hidalgo 99, Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "A historical museum showcasing Mexico’s colonial past, featuring religious artifacts, paintings, and a beautiful baroque-style church.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Arcos del Sitio",
+        "image": "images/arcos-del-sitio.webp",
+        "alt": "Arcos del Sitio Aqueduct",
+        "address": "Arcos del Sitio, Tepotzotlán, Edo. México, Mexico",
+        "description": "A stunning 18th-century aqueduct with impressive arches, ideal for hiking and enjoying panoramic views of the surrounding landscape.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Parque Ecológico Xochitla",
+        "image": "images/xochitla-park.webp",
+        "alt": "Xochitla Ecological Park",
+        "address": "Carretera Circunvalación s/n, Tepotzotlán, Edo. México, Mexico",
+        "description": "A green oasis offering gardens, lakes, bike trails, and family-friendly activities like kayaking, camping, and interactive workshops.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Plaza Virreinal",
+        "image": "images/plaza-virreinal.webp",
+        "alt": "Plaza Virreinal in Tepotzotlán",
+        "address": "Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "A charming colonial-style square filled with local artisans, food vendors, and cultural events throughout the year.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Centro Histórico de Tepotzotlán",
+        "image": "images/centro-historico.webp",
+        "alt": "Historic Downtown of Tepotzotlán",
+        "address": "Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "A vibrant area with cobblestone streets, colorful buildings, traditional restaurants, and historical landmarks.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Parque Estatal Sierra de Tepotzotlán",
+        "image": "images/sierra-tepotzotlan.webp",
+        "alt": "Sierra de Tepotzotlán State Park",
+        "address": "Sierra de Tepotzotlán, Edo. México, Mexico",
+        "description": "A natural reserve perfect for hiking, birdwatching, and camping, with breathtaking mountain views and waterfalls.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Los Portales de Tepotzotlán",
+        "image": "images/los-portales.webp",
+        "alt": "Los Portales in Tepotzotlán",
+        "address": "Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "An iconic row of arches housing cafes, shops, and traditional food stalls, offering a perfect place to relax and enjoy local cuisine.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Casa de Cultura Tepotzotlán",
+        "image": "images/casa-cultura.webp",
+        "alt": "Casa de Cultura Tepotzotlán",
+        "address": "Av. Insurgentes 1, Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "A cultural center hosting art exhibitions, workshops, and live performances, celebrating local traditions and creativity.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Balneario El Chinguirito",
+        "image": "images/balneario-chinguirito.webp",
+        "alt": "Balneario El Chinguirito",
+        "address": "Camino al Cerrito s/n, Tepotzotlán, Edo. México, Mexico",
+        "description": "A family-friendly water park with pools, slides, and picnic areas, offering a refreshing escape on hot days.",
+        "buttonText": "Learn More"
+      },
+      {
+        "title": "Mercado Municipal de Tepotzotlán",
+        "image": "images/mercado-municipal.webp",
+        "alt": "Municipal Market of Tepotzotlán",
+        "address": "Centro, Tepotzotlán, Edo. México, Mexico",
+        "description": "A bustling market where visitors can taste local delicacies, buy handmade crafts, and experience authentic Mexican culture.",
+        "buttonText": "Learn More"
+      }
+    ]
+  }
+  

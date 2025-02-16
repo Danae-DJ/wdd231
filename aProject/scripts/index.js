@@ -86,15 +86,16 @@ function displayWeatherResults(data) {
 //curiosities text-changing
 
 let curiosities = [];
-let curiosityIndex = 0;  // Define the curiosityIndex variable
+let curiosityIndex = 0;
 
 async function fetchCuriosities() {
     try {
-        const response = await fetch('/data/curiosities.json');
+        const response = await fetch('./data/curiosities.json'); // Ensure correct path
         if (!response.ok) throw new Error('Failed to fetch curiosities');
-        const data = await response.json();
-        curiosities = data.Curiosities; // Store the fetched curiosities
-        changeCuriosity(); // Start displaying them
+        curiosities = await response.json();
+        curiosities = curiosities.Curiosities; // Get the actual list
+        changeCuriosity(); // Show first curiosity
+        setInterval(changeCuriosity, 10000); // Start the interval AFTER data loads
     } catch (error) {
         console.error('Error:', error);
     }
@@ -102,13 +103,19 @@ async function fetchCuriosities() {
 
 function changeCuriosity() {
     if (curiosities.length > 0) {
-        document.getElementById("curiosity-text").textContent = curiosities[curiosityIndex];
-        curiosityIndex = (curiosityIndex + 1) % curiosities.length; // Loop back to the first curiosity
+        const curiosityText = document.getElementById("curiosity-text");
+        const curiosityImage = document.getElementById("curiosity-image"); // Add an ID for the image
+
+        curiosityText.innerHTML = curiosities[curiosityIndex].text; // Use innerHTML for formatting
+        curiosityImage.src = curiosities[curiosityIndex].image;
+        curiosityImage.alt = "Curiosity Image"; // Optional for accessibility
+
+        curiosityIndex = (curiosityIndex + 1) % curiosities.length;
     }
 }
 
 fetchCuriosities();
-setInterval(changeCuriosity, 10000);
+
 
 
 

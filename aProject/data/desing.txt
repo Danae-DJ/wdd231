@@ -327,7 +327,7 @@ Let me know which effect you prefer! 😊🔥
 
 
 
-
+My diagram of files and folders
 aProject{
         data{
             curiosities.json

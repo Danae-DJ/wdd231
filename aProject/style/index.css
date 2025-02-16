@@ -147,7 +147,7 @@ nav ul li a {
 
 
 /*curiosities data*/
-.Curiosities {
+.curiosity-card {
     background-color: var(--color2);
     border: 2px solid var(--color7);
     border-radius: 10px;
@@ -158,17 +158,17 @@ nav ul li a {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.Curiosities h2 {
+.curiosity-card h2 {
     color: var(--color5);
     margin-bottom: 10px;
 }
 
-.Curiosities p {
+.curiosity-card p {
     color: var(--color3);
     font-size: 1rem;
 }
 
-.Curiosities img {
+.curiosity-card img {
     max-width: 100%;
     border-radius: 10px;
 }

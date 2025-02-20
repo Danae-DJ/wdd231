@@ -118,7 +118,7 @@ nav ul li a {
 }
 
 .information a{
-    color: var(--color4);
+    color: var(--color5);
 }  
 
 /* associate Cards Section General */
@@ -183,7 +183,7 @@ nav ul li a {
 /* Card Button */
 .card a {
     background-color: var(--color9);
-    color: white;
+    color: navy;
     text-decoration: none;
     padding: 10px 16px;
     display: inline-block;
@@ -197,6 +197,7 @@ nav ul li a {
 .card a:hover {
     background-color: var(--color8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: var(--color1);
 }
 
 

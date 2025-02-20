@@ -1,12 +1,12 @@
 {
-    "Members": [
+    "members": [
         {
             "businesName": "Business One",
             "businessTagline": "Excellence in Service",
             "email": "info@businessone.com",
             "phone": "123-456-7890",
             "URL": "https://businessone.com",
-            "Image":"images/bupexels-theo-30488545.webp",
+            "Image":"images/pexels-theo-30488545.webp",
             "referenc3mail":"https://www.pexels.com/es-es/foto/30320972/"
         },
         {

@@ -266,7 +266,8 @@ nav ul li a {
 
 
 .news-card a:hover {
-    background-color: var(--blue-7);
+    background-color: var(--color1);
+    color: var(--color5);
 }
 
 

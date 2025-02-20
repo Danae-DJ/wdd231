@@ -59,7 +59,8 @@ fetch('data/locations.json')
           <h3 class="place-title">${place.title}</h3>
           <p class="place-description">${place.description}</p>
           <p class="place-address">${place.address}</p>
-          <button class="learn-more">${place.buttonText}</button>
+          <a href="${place.buttonText || '#'}" target="_blank"> <button class="learn-more"> Learn More </button></a>
+          
       `;
   
       // Append the new place element to the container

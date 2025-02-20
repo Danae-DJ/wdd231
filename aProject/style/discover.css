@@ -171,7 +171,8 @@ nav ul li a {
             "image"
             "title"
             "description"
-            "location";
+            "location"
+            "buttom";
         grid-template-columns: 1fr;
     }
 }
@@ -182,7 +183,8 @@ nav ul li a {
         grid-template-areas:
             "image title"
             "image description"
-            "image location";
+            "image location"
+            "image buttom";
         grid-template-columns: 1fr 2fr;
     }
 }
@@ -193,7 +195,8 @@ nav ul li a {
         grid-template-areas:
             "image title"
             "image description"
-            "image location";
+            "image location"
+            "image buttom";
         grid-template-columns: 1fr 2fr;
     }
 }
@@ -215,6 +218,10 @@ nav ul li a {
     }
 }
 
+.card  a {
+    grid-area: buttom;
+    text-align: center;
+}
 
 .card .learn-more {
     background-color: var(--color4);

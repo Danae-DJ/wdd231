@@ -6,7 +6,7 @@
         "alt": "Museo Nacional del Virreinato",
         "address": "Plaza Hidalgo 99, Centro, Tepotzotlán, Edo. México, Mexico",
         "description": "A historical museum showcasing Mexico’s colonial past, featuring religious artifacts, paintings, and a beautiful baroque-style church.",
-        "buttonText": "Learn More"
+        "buttonText": "https://www.gob.mx/cultura/prensa/el-museo-nacional-del-virreinato-ampliara-su-oferta-cultural-este-2025?idiom=es"
       },
       {
         "title": "Arcos del Sitio",
@@ -14,7 +14,7 @@
         "alt": "Arcos del Sitio Aqueduct",
         "address": "Arcos del Sitio, Tepotzotlán, Edo. México, Mexico",
         "description": "A stunning 18th-century aqueduct with impressive arches, ideal for hiking and enjoying panoramic views of the surrounding landscape.",
-        "buttonText": "Learn More"
+        "buttonText": "https://experiencia.edomex.gob.mx/recursos_turisticos/mostrarDetalleRecursos/1972"
       },
       {
         "title": "Parque Ecológico Xochitla",
@@ -22,7 +22,7 @@
         "alt": "Xochitla Ecological Park",
         "address": "Carretera Circunvalación s/n, Tepotzotlán, Edo. México, Mexico",
         "description": "A green oasis offering gardens, lakes, bike trails, and family-friendly activities like kayaking, camping, and interactive workshops.",
-        "buttonText": "Learn More"
+        "buttonText": "https://programadestinosmexico.com/xochitla-parque-ecologico-estado-de-mexico/"
       },
       {
         "title": "Plaza Virreinal",
@@ -30,7 +30,7 @@
         "alt": "Plaza Virreinal in Tepotzotlán",
         "address": "Centro, Tepotzotlán, Edo. México, Mexico",
         "description": "A charming colonial-style square filled with local artisans, food vendors, and cultural events throughout the year.",
-        "buttonText": "Learn More"
+        "buttonText": "https://www.plazavirreinalguadalupana.com/"
       },
       {
         "title": "Centro Histórico de Tepotzotlán",
@@ -38,7 +38,7 @@
         "alt": "Historic Downtown of Tepotzotlán",
         "address": "Centro, Tepotzotlán, Edo. México, Mexico",
         "description": "A vibrant area with cobblestone streets, colorful buildings, traditional restaurants, and historical landmarks.",
-        "buttonText": "Learn More"
+        "buttonText": "http://experiencia.edomex.gob.mx/recursos_turisticos/mostrarDetalleRecursos/678#:~:text=En%20el%20Centro%20Hist%C3%B3rico%20de,municipal%20y%20una%20galer%C3%ADa%20fotogr%C3%A1fica."
       },
       {
         "title": "Parque Estatal Sierra de Tepotzotlán",
@@ -46,7 +46,7 @@
         "alt": "Sierra de Tepotzotlán State Park",
         "address": "Sierra de Tepotzotlán, Edo. México, Mexico",
         "description": "A natural reserve perfect for hiking, birdwatching, and camping, with breathtaking mountain views and waterfalls.",
-        "buttonText": "Learn More"
+        "buttonText": "http://sma.edomex.gob.mx/parque_estatal_sierra_de_tepotzotlan"
       },
       {
         "title": "Los Portales de Tepotzotlán",
@@ -54,7 +54,7 @@
         "alt": "Los Portales in Tepotzotlán",
         "address": "Centro, Tepotzotlán, Edo. México, Mexico",
         "description": "An iconic row of arches housing cafes, shops, and traditional food stalls, offering a perfect place to relax and enjoy local cuisine.",
-        "buttonText": "Learn More"
+        "buttonText": "https://www.mexicoenfotos.com/antiguas/mexico/tepotzotlan/portales-MX13229838191179"
       },
       {
         "title": "Casa de Cultura Tepotzotlán",
@@ -70,7 +70,7 @@
         "alt": "Balneario El Chinguirito",
         "address": "Camino al Cerrito s/n, Tepotzotlán, Edo. México, Mexico",
         "description": "A family-friendly water park with pools, slides, and picnic areas, offering a refreshing escape on hot days.",
-        "buttonText": "Learn More"
+        "buttonText": "https://sic.cultura.gob.mx/ficha.php?table=centro_cultural&table_id=284"
       },
       {
         "title": "Mercado Municipal de Tepotzotlán",
@@ -78,7 +78,7 @@
         "alt": "Municipal Market of Tepotzotlán",
         "address": "Centro, Tepotzotlán, Edo. México, Mexico",
         "description": "A bustling market where visitors can taste local delicacies, buy handmade crafts, and experience authentic Mexican culture.",
-        "buttonText": "Learn More"
+        "buttonText": "https://www.minube.com.mx/rincon/mercado-municipal-de-tepotzotlan-a2223126"
       }
     ]
   }

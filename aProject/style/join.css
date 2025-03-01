@@ -250,10 +250,27 @@ nav ul li a {
 }
 
 
+/*Form*/
 
+#inscription {
+    display: flex;
+    justify-content: center;
+    margin: 55px auto;
+    max-width: 800px;
+    min-width: 200px;
+    border: 20px solid var(--color6);
+    padding: 50px;
+}
 
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
 
-
+fieldset {
+    padding: 10px 0.5rem;
+    margin: 20px auto;
+}
 
 /* Footer */
 /* General Footer Styling */
